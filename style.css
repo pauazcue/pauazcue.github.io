@@ -248,6 +248,9 @@
     letter-spacing: 0.1em;
     color: var(--ink-3);
   }
+  /* Imagen mobile de cards — oculta en desktop */
+  .pc-img-mobile { display: none !important; }
+
   .portfolio-card--image {
     position: relative;
     color: var(--ink-inverse) !important;
@@ -777,34 +780,37 @@
     /* PORTFOLIO — cards una columna */
     .portfolio-grid { grid-template-columns: 1fr; }
 
-    /* CARD CON IMAGEN — imagen arriba, texto abajo */
+    /* CARD CON IMAGEN en mobile — imagen arriba, texto abajo */
     .portfolio-card--image {
-      background-size: cover;
-      background-position: center;
-      min-height: 0;
+      background-image: none !important;
       flex-direction: column;
+      padding: 0;
+      gap: 0;
     }
-    .portfolio-card--image::after {
-      content: '';
-      display: block;
+    .portfolio-card--image::before,
+    .portfolio-card--image::after { display: none; }
+    .pc-img-mobile {
+      display: block !important;
       width: 100%;
-      aspect-ratio: 16/7;
-      background-image: inherit;
-      background-size: cover;
-      background-position: center;
-      margin: -40px -24px 16px;
-      width: calc(100% + 48px);
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: center top;
     }
-    .portfolio-card--image::before { display: none; }
-    .portfolio-card--image .pc-meta,
-    .portfolio-card--image .pc-title { color: var(--ink); }
-    .portfolio-card--image .pc-meta { color: var(--ink-3); }
-    .portfolio-card--image .pc-status { color: var(--red) !important; }
+    .portfolio-card--image .pc-meta {
+      color: var(--ink-3);
+      padding: 20px 24px 0;
+    }
+    .portfolio-card--image .pc-title {
+      color: var(--ink);
+      padding: 0 24px;
+    }
     .portfolio-card--image .pc-desc {
       color: var(--ink-2);
       opacity: 1;
       transform: none;
+      padding: 0 24px 24px;
     }
+    .portfolio-card--image .pc-status { color: var(--red) !important; }
 
     /* EXPERIENCIA */
     .company { grid-template-columns: 1fr; gap: 8px; }
