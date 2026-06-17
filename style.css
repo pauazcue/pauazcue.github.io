@@ -220,27 +220,98 @@
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    background: var(--border-medium);
+    gap: 32px;
   }
   .portfolio-card {
-    background: var(--bg-2);
-    padding: 40px 64px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
     text-decoration: none;
     color: var(--ink);
-    min-height: 240px;
-    transition: background 0.2s;
+    background: transparent;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .portfolio-card:hover {
-    background: var(--surface-light);
+
+  /* Marco de la imagen */
+  .pc-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--bg-2);
+    border: 1px solid var(--border-medium);
+  }
+  .pc-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  }
+  /* Zoom sutil de la imagen en hover (estilo lavis / emilio) */
+  .portfolio-card:hover .pc-media img {
+    transform: scale(1.05);
+  }
+
+  /* Número grande, estilo editorial, sobre la imagen */
+  .pc-num {
+    position: absolute;
+    left: 16px;
+    bottom: 12px;
+    z-index: 2;
+    font-family: var(--display);
+    font-size: 40px;
+    line-height: 1;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.35);
+    pointer-events: none;
+  }
+  .portfolio-card:hover .pc-num {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+
+  /* Placeholder cuando todavía no hay imagen subida */
+  .pc-media--empty {
+    background:
+      repeating-linear-gradient(
+        45deg,
+        var(--bg-2),
+        var(--bg-2) 12px,
+        var(--surface-light) 12px,
+        var(--surface-light) 24px
+      );
+  }
+  .pc-media--empty::after {
+    content: 'Imagen próximamente';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* Texto debajo de la imagen */
+  .pc-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 2px 0;
   }
   .portfolio-card .pc-meta {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    gap: 16px;
     font-family: var(--mono);
     font-weight: 400;
     font-size: 10px;
@@ -248,60 +319,47 @@
     letter-spacing: 0.1em;
     color: var(--ink-3);
   }
-  /* Imagen mobile de cards — oculta en desktop */
-  .pc-img-mobile { display: none !important; }
-
-  .portfolio-card--image {
-    position: relative;
-    color: var(--ink-inverse) !important;
-    overflow: hidden;
+  .portfolio-card .pc-status {
+    color: var(--red);
+    white-space: nowrap;
+    transition: transform 0.3s ease;
   }
-  /* Overlay: por defecto casi opaco, en hover se aclara para mostrar imagen */
-  .portfolio-card--image::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.72);
-    transition: background 0.35s ease;
-    z-index: 0;
-  }
-  .portfolio-card--image:hover::before {
-    background: rgba(0,0,0,0.45);
-  }
-  .portfolio-card--image .pc-meta,
-  .portfolio-card--image .pc-title,
-  .portfolio-card--image .pc-desc {
-    position: relative;
-    z-index: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  /* Texto visible siempre pero más legible */
-  .portfolio-card--image .pc-meta { color: rgba(255,255,255,0.75); }
-  .portfolio-card--image .pc-status { color: #fff !important; }
-  .portfolio-card--image .pc-title { color: #fff; }
-  /* Descripción: oculta por defecto, aparece en hover */
-  .portfolio-card--image .pc-desc {
-    color: rgba(255,255,255,0);
-    transform: translateY(6px);
-  }
-  .portfolio-card--image:hover .pc-desc {
-    color: rgba(255,255,255,0.85);
-    transform: translateY(0);
+  .portfolio-card:hover .pc-status {
+    transform: translateX(3px);
   }
   .portfolio-card .pc-title {
     font-family: var(--display);
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.15;
     color: var(--ink);
     letter-spacing: -0.005em;
-    margin-top: 12px;
   }
+  /* Descripción: se revela suavemente en hover */
   .portfolio-card .pc-desc {
     font-size: 14px;
     line-height: 1.5;
     color: var(--ink-2);
-    margin-top: auto;
-    max-width: 420px;
+    max-width: 440px;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-4px);
+    overflow: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+  }
+  .portfolio-card:hover .pc-desc,
+  .portfolio-card:focus-within .pc-desc {
+    opacity: 1;
+    max-height: 160px;
+    transform: translateY(0);
+  }
+  .portfolio-card--soon { cursor: default; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .portfolio-card,
+    .pc-media img,
+    .pc-num,
+    .pc-desc { transition: none; }
+    .portfolio-card:hover .pc-media img { transform: none; }
   }
 
   /* EXPERIENCIA */
@@ -612,8 +670,15 @@
 
     .section-head { margin-bottom: 32px; }
 
-    .portfolio-grid { grid-template-columns: 1fr; gap: 16px; }
-    .portfolio-card { min-height: auto; padding: 24px; }
+    .portfolio-grid { grid-template-columns: 1fr; gap: 28px; }
+    .pc-media { aspect-ratio: 16 / 10; }
+    /* En mobile no hay hover: mostrar siempre la descripción */
+    .portfolio-card .pc-desc {
+      opacity: 1;
+      max-height: 200px;
+      transform: none;
+    }
+    .pc-num { opacity: 0.9; transform: none; }
 
     .company { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
     .company .period { padding-top: 0; }
@@ -800,38 +865,6 @@
 
     /* PORTFOLIO — cards una columna */
     .portfolio-grid { grid-template-columns: 1fr; }
-
-    /* CARD CON IMAGEN en mobile — imagen arriba, texto abajo */
-    .portfolio-card--image {
-      background-image: none !important;
-      flex-direction: column;
-      padding: 0;
-      gap: 0;
-    }
-    .portfolio-card--image::before,
-    .portfolio-card--image::after { display: none; }
-    .pc-img-mobile {
-      display: block !important;
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      object-position: center top;
-    }
-    .portfolio-card--image .pc-meta {
-      color: var(--ink-3);
-      padding: 20px 24px 0;
-    }
-    .portfolio-card--image .pc-title {
-      color: var(--ink);
-      padding: 0 24px;
-    }
-    .portfolio-card--image .pc-desc {
-      color: var(--ink-2);
-      opacity: 1;
-      transform: none;
-      padding: 0 24px 24px;
-    }
-    .portfolio-card--image .pc-status { color: var(--red) !important; }
 
     /* EXPERIENCIA */
     .company { grid-template-columns: 1fr; gap: 8px; }
