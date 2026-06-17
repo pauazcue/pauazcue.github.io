@@ -1,1 +1,19 @@
+# Normalize text files to LF
 * text=auto eol=lf
+
+# Treat binary assets as binary so they are never line-ending normalized (prevents corruption)
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.svg   binary
+*.pdf   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+*.eot   binary
+*.mp4   binary
+*.mp3   binary

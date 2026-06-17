@@ -713,6 +713,27 @@
     margin: 32px 0;
   }
   .img-wide img { width: 100%; display: block; }
+
+  /* Hover: zoom sutil sobre las imágenes de los casos (estilo lavis.work) */
+  .img-full img,
+  .img-wide img,
+  .img-hero-split .half img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+  .img-full:hover img,
+  .img-wide:hover img,
+  .img-hero-split .half:hover img {
+    transform: scale(1.04);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .img-full img,
+    .img-wide img,
+    .img-hero-split .half img { transition: none; }
+    .img-full:hover img,
+    .img-wide:hover img,
+    .img-hero-split .half:hover img { transform: none; }
+  }
   .img-caption { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: 8px; }
 
   /* SECTIONS */
@@ -894,6 +915,21 @@
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Fallback: si JS está desactivado, mostrar todo el contenido */
+.no-js .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Fallback: respetar preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 .reveal.reveal--image {
   transform: translateY(16px) scale(0.99);
