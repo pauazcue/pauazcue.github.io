@@ -113,83 +113,92 @@ section.dark { background: var(--surface-dark); }
   margin-top: 0;
 }
 
-/* Card base */
+/* Card base — toda imagen */
 .portfolio-card {
-  background: var(--bg-2);
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: var(--ink);
-  transition: background 0.2s;
-  overflow: hidden;
-}
-.portfolio-card:hover { background: var(--surface-light); }
-
-/* Imagen dentro de la card */
-.pc-img-wrap {
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  background: var(--bg);
   position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--ink-inverse);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--bg-2);
+}
+
+/* Imagen de fondo */
+.pc-img-wrap {
+  position: absolute;
+  inset: 0;
 }
 .pc-img-wrap img {
   width: 100%; height: 100%;
   object-fit: cover; object-position: center;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
-.portfolio-card:hover .pc-img-wrap img { transform: scale(1.03); }
+.portfolio-card:hover .pc-img-wrap img { transform: scale(1.04); }
 
 /* Placeholder cuando no hay imagen */
-.pc-img-ph {
+.pc-img-wrap.pc-img-ph {
   background: var(--bg-2);
   display: flex; align-items: center; justify-content: center;
 }
-.pc-img-ph img { display: none; }
+.pc-img-wrap.pc-img-ph img { display: none; }
 .pc-ph-text {
   font-family: var(--mono); font-size: 11px;
   color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em;
 }
 
-/* Texto de la card */
-.pc-body { padding: 28px 32px 32px; }
+/* Overlay oscuro — siempre presente, más intenso sin hover */
+.portfolio-card::before {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+  transition: background 0.3s ease;
+}
+.portfolio-card:hover::before {
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 100%);
+}
+
+/* Texto — siempre visible, en la parte inferior */
+.pc-body {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  z-index: 2; padding: 24px 28px 28px;
+}
 .pc-meta {
   display: flex; justify-content: space-between; align-items: baseline;
   font-family: var(--mono); font-size: 10px;
-  text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3);
-  margin-bottom: 10px;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
 }
-.pc-status { color: var(--red); font-weight: 500; }
-.pc-title { font-family: var(--display); font-size: 22px; line-height: 1.2; color: var(--ink); margin-bottom: 10px; font-weight: 400; }
-.pc-desc { font-size: 14px; line-height: 1.6; color: var(--ink-2); }
-
-/* Card con imagen de fondo (Metro) — solo desktop */
-.portfolio-card--image {
-  background-size: cover;
-  background-position: center top;
-  position: relative;
-  min-height: 360px;
+.pc-status { color: rgba(255,255,255,0.9); font-weight: 500; }
+.pc-title {
+  font-family: var(--display); font-size: 20px; line-height: 1.2;
+  color: #fff; font-weight: 400;
 }
-.portfolio-card--image::before {
-  content: ''; position: absolute; inset: 0;
-  background: rgba(0,0,0,0.68);
-  transition: background 0.35s ease; z-index: 0;
-}
-.portfolio-card--image:hover::before { background: rgba(0,0,0,0.42); }
-.portfolio-card--image .pc-body--overlay { position: relative; z-index: 1; margin-top: auto; }
-.portfolio-card--image .pc-meta { color: rgba(255,255,255,0.65); }
-.portfolio-card--image .pc-status { color: #fff !important; }
-.portfolio-card--image .pc-title { color: #fff; }
-.portfolio-card--image .pc-desc {
-  color: rgba(255,255,255,0);
+/* Descripción: oculta, aparece en hover */
+.pc-desc {
+  font-size: 13px; line-height: 1.5; color: rgba(255,255,255,0);
+  margin-top: 6px;
   transform: translateY(6px);
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s ease, transform 0.3s ease;
+  max-height: 0; overflow: hidden;
+  transition: color 0.3s, transform 0.3s, max-height 0.3s;
 }
-.portfolio-card--image:hover .pc-desc { color: rgba(255,255,255,0.85); transform: translateY(0); }
+.portfolio-card:hover .pc-desc {
+  color: rgba(255,255,255,0.82);
+  transform: translateY(0);
+  max-height: 80px;
+}
 
-/* Card próximamente */
+/* Card próximamente — sin hover */
 .portfolio-card--soon { cursor: default; }
-.portfolio-card--soon:hover { background: var(--bg-2); }
+.portfolio-card--soon .pc-title { color: rgba(255,255,255,0.5); }
+.portfolio-card--soon .pc-meta { color: rgba(255,255,255,0.35); }
+.portfolio-card--soon::before {
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+/* Metro — ya tiene background-image, no necesita pc-img-wrap */
+.portfolio-card--image .pc-img-wrap { display: none; }
 
 /* ── EXPERIENCIA ────────────────────────────── */
 section.dark .label { color: var(--accent-light); }
@@ -350,27 +359,20 @@ footer { padding: 24px 80px; border-top: 1px solid var(--border); font-family: v
 
   /* Portfolio */
   .portfolio-grid { grid-template-columns: 1fr; }
-  .pc-body { padding: 20px 20px 24px; }
-  .pc-title { font-size: 20px; }
-
-  /* Card Metro mobile: imagen arriba, texto abajo */
-  .portfolio-card--image {
-    background-image: none !important;
-    min-height: 0;
+  .portfolio-card { aspect-ratio: 3/2; }
+  /* En mobile mostrar texto siempre */
+  .portfolio-card .pc-desc {
+    color: rgba(255,255,255,0.75) !important;
+    max-height: 80px !important;
+    transform: none !important;
   }
-  .portfolio-card--image::before { display: none; }
-  .pc-img-mobile {
-    display: block !important;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    object-position: center top;
+  .portfolio-card::before {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0) 100%) !important;
   }
-  .portfolio-card--image .pc-body--overlay { margin-top: 0; }
-  .portfolio-card--image .pc-meta { color: var(--ink-3); }
-  .portfolio-card--image .pc-status { color: var(--red) !important; }
-  .portfolio-card--image .pc-title { color: var(--ink); }
-  .portfolio-card--image .pc-desc { color: var(--ink-2); opacity: 1; transform: none; }
+  /* Card Metro mobile: imagen real */
+  .portfolio-card--image { background-image: none !important; }
+  .portfolio-card--image .pc-img-wrap { display: block !important; }
+  .pc-img-mobile { display: none; }
 
   /* Experiencia */
   .company { grid-template-columns: 1fr; gap: 12px; }
