@@ -16,7 +16,7 @@
   <a href="index.html" class="back">← volver al inicio</a>
 </nav>
 <div class="container">
-  <header class="case-header">
+  <header class="case-header reveal">
     <div class="case-eyebrow"><span class="co">OCA</span><span>2024–presente</span></div>
     <h1 class="case-title">Cuando el proyecto llegó roto — y lo tuvimos que reconstruir desde adentro.</h1>
     <p class="case-lead">Nos encargaron revisar la UI de un nuevo sistema de facturación. Lo que encontramos era mucho más que un problema de diseño.</p>
@@ -25,38 +25,38 @@
 <div class="case-meta-item"><div class="mi-label">Estado</div><div class="mi-value">En desarrollo · Salida a producción est. 2025</div></div>
 <div class="case-meta-item"><div class="mi-label">Industria</div><div class="mi-value">Logística · Facturación interna</div></div></div>
   </header>
-</div><div class="container"><div class="img-wide"><div class="img-ph">Backoffice Comercial — imagen principal · próximamente</div></div></div><div class="container">
-  <section class="case-section">
+</div><div class="container"><div class="img-wide reveal"><div class="img-ph">Backoffice Comercial — imagen principal · próximamente</div></div></div><div class="container">
+  <section class="case-section reveal">
     <span class="section-label">Contexto</span>
     <h2>OCA mueve más de dos millones de paquetes por mes.</h2>
     <p>Con más de <strong>125 sucursales</strong> y <strong>1.000 puntos de entrega y despacho</strong> en todo el país, OCA es la empresa de logística más grande de Argentina. Toda esa operación generaba facturación todos los meses — y el sistema que la gestionaba era COBOL: un sistema heredado de décadas, complejo, difícil de mantener y sin ninguna contemplación por la experiencia del usuario.</p><p>El equipo de facturación — cinco o seis personas — no podía hacer home office, tenía que ir los sábados cuando caía el cierre mensual, y le resultaba prácticamente imposible tomarse vacaciones en épocas de facturación.</p>
   </section>
 </div>
-  <section class="case-section dark">
+  <section class="case-section dark reveal">
     <span class="section-label">El problema</span>
     <h2>Cerraban el mes un sábado. No podían tomarse vacaciones.</h2>
     <p>El sistema anterior no solo era tecnológicamente obsoleto. El proceso de facturación era un cuello de botella humano: todo el cálculo de los envíos se hacía al cierre del mes, de una sola vez.</p><p>Además, los errores de facturación eran frecuentes. La cultura comercial de OCA priorizaba retener clientes a cualquier costo — incluso clientes que no dejaban rentabilidad. Para acomodar exigencias, el equipo comercial manipulaba los números manualmente generando una cantidad elevada de notas de crédito y débito, lo que a su vez retrasaba la cobranza: una factura rebotada requería emitir nota de crédito, rehacer la factura, y volver a enviar.</p><div class="quote-block"><p>El problema no era solo tecnológico. Era que el proceso entero estaba diseñado alrededor de las limitaciones del sistema viejo, no alrededor de las personas que facturaban.</p></div>
   </section>
 <div class="container">
-  <section class="case-section">
+  <section class="case-section reveal">
     <span class="section-label">El diagnóstico</span>
     <h2>Nos pidieron revisar la UI. Encontramos que no había UX.</h2>
     <p>La consultora había entregado pantallas. Nada más. No había flujos de usuario, no había lógica de navegación, no había contemplación de los estados intermedios, los errores ni las validaciones. Eran pantallas sueltas que replicaban la interfaz de COBOL en una tecnología nueva — cambiaban la tecnología pero no el problema.</p><p>Lo planteé al PM: esto no era un problema de UI. Era un problema de producto. Lo planteamos, lo validaron, y lo tuvimos que resolver nosotros.</p>
   </section>
 </div><div class="container">
-  <section class="case-section">
+  <section class="case-section reveal">
     <span class="section-label">El proceso</span>
     <h2>Discovery, flujos y una junior a quien acompañar.</h2>
-    <div class="step-list"><div class="step"><div class="step-num">01</div><div><h3>Discovery con el equipo de facturación</h3><p>Entrevistamos al equipo para entender cómo trabajaban, qué pasos hacían, dónde se trababan, qué información necesitaban ver y cuándo.</p></div></div><div class="step"><div class="step-num">02</div><div><h3>Definición de flujos desde cero</h3><p>Mapeamos todos los flujos que el sistema necesitaba soportar: facturación masiva, individual con especificaciones por cliente, actualización de tarifas, gestión de abonos y anticipos, auditoría de cambios. Cada flujo validado técnicamente y con operaciones antes de pasar a pantallas.</p></div></div><div class="step"><div class="step-num">03</div><div><h3>Lineamientos y pasaje a la agencia</h3><p>La agencia seguía siendo responsable de la UI en alta fidelidad. Definí los flujos en baja, pasé los lineamientos del Design System en construcción, y actué como UAT del lado de diseño.</p></div></div><div class="step"><div class="step-num">04</div><div><h3>Acompañamiento de la diseñadora junior</h3><p>Con una persona con poca experiencia a cargo, la orienté hacia el research y la recolección de información, enseñándole a pensar flujos y desarrollar pantallas en baja antes de ir a alta.</p></div></div></div>
+    <div class="step-list"><div class="step reveal"><div class="step-num">01</div><div><h3>Discovery con el equipo de facturación</h3><p>Entrevistamos al equipo para entender cómo trabajaban, qué pasos hacían, dónde se trababan, qué información necesitaban ver y cuándo.</p></div></div><div class="step reveal"><div class="step-num">02</div><div><h3>Definición de flujos desde cero</h3><p>Mapeamos todos los flujos que el sistema necesitaba soportar: facturación masiva, individual con especificaciones por cliente, actualización de tarifas, gestión de abonos y anticipos, auditoría de cambios. Cada flujo validado técnicamente y con operaciones antes de pasar a pantallas.</p></div></div><div class="step reveal"><div class="step-num">03</div><div><h3>Lineamientos y pasaje a la agencia</h3><p>La agencia seguía siendo responsable de la UI en alta fidelidad. Definí los flujos en baja, pasé los lineamientos del Design System en construcción, y actué como UAT del lado de diseño.</p></div></div><div class="step reveal"><div class="step-num">04</div><div><h3>Acompañamiento de la diseñadora junior</h3><p>Con una persona con poca experiencia a cargo, la orienté hacia el research y la recolección de información, enseñándole a pensar flujos y desarrollar pantallas en baja antes de ir a alta.</p></div></div></div>
   </section>
-</div><div class="container"><div class="img-wide"><div class="img-ph">Flujos y pantallas del backoffice · próximamente</div></div></div><div class="container">
-  <section class="case-section">
+</div><div class="container"><div class="img-wide reveal"><div class="img-ph">Flujos y pantallas del backoffice · próximamente</div></div></div><div class="container">
+  <section class="case-section reveal">
     <span class="section-label">El impacto</span>
     <h2>Un sistema que cambia cómo OCA factura — y cómo trabaja el equipo.</h2>
-    <p>El sistema está en desarrollo con salida a producción estimada para mediados de 2025. Cuando salga:</p><div class="step-list"><div class="step"><div class="step-num">→</div><div><h3>Facturación en tiempo real</h3><p>La tarifa de cada envío se calcula en el momento. Ya no hay que esperar al cierre del mes — el equipo puede hacer cortes en cualquier fecha.</p></div></div><div class="step"><div class="step-num">→</div><div><h3>Control y auditoría</h3><p>Las reglas de negocio están en el sistema, no en la cabeza de cada asesor comercial. Se reduce el espacio para ajustes manuales que generaban notas de crédito por error o por presión.</p></div></div><div class="step"><div class="step-num">→</div><div><h3>Un equipo que puede trabajar diferente</h3><p>Sin cierres que los ate a la oficina los sábados. Con visibilidad y control en lugar de tener que resolver a mano lo que el software debería resolver por ellos.</p></div></div></div>
+    <p>El sistema está en desarrollo con salida a producción estimada para mediados de 2025. Cuando salga:</p><div class="step-list"><div class="step reveal"><div class="step-num">→</div><div><h3>Facturación en tiempo real</h3><p>La tarifa de cada envío se calcula en el momento. Ya no hay que esperar al cierre del mes — el equipo puede hacer cortes en cualquier fecha.</p></div></div><div class="step reveal"><div class="step-num">→</div><div><h3>Control y auditoría</h3><p>Las reglas de negocio están en el sistema, no en la cabeza de cada asesor comercial. Se reduce el espacio para ajustes manuales que generaban notas de crédito por error o por presión.</p></div></div><div class="step reveal"><div class="step-num">→</div><div><h3>Un equipo que puede trabajar diferente</h3><p>Sin cierres que los ate a la oficina los sábados. Con visibilidad y control en lugar de tener que resolver a mano lo que el software debería resolver por ellos.</p></div></div></div>
   </section>
 </div><div class="container">
-  <div class="next-case">
+  <div class="next-case reveal">
     <span class="nc-label">// siguiente caso</span>
     <a href="caso-epak.html">ePak + Design System Ñandú →</a>
   </div>
@@ -64,6 +64,18 @@
   <span>© 2026 Paula Azcue</span>
   <span>🇦🇷 Buenos Aires, Argentina</span>
 </footer>
-<script src="animations.js" defer></script>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.07, rootMargin: "0px 0px -32px 0px" });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
