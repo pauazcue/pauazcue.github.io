@@ -274,6 +274,12 @@
 </footer>
 
 <script>
+// Reveal on scroll
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
 // Animación de números
 (function() {
   const nums = document.querySelectorAll('.scale-num[data-count]');

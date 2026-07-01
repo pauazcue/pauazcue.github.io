@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ñandú — Design System — OCA · Paula Azcue</title>
-<meta name="description" content="Ñandú: el design system de OCA. Cómo construí la infraestructura visual que unifica ePak, OMS, Backoffice y los productos futuros de la empresa.">
+<meta name="description" content="Ñandú: el lenguaje compartido para escalar el ecosistema digital de OCA. Cómo construí la infraestructura visual que unifica ePak, OMS, Backoffice y Comunicaciones.">
 <link rel="canonical" href="https://pauazcue.github.io/caso-nandu.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +24,11 @@
       <span class="co">OCA</span>
       <span>2024–presente</span>
     </div>
-    <h1 class="case-title">Ñandú — Design System</h1>
-    <p class="case-lead">OCA tenía múltiples productos en marcha simultáneamente. Cada uno tomaba decisiones de diseño de forma independiente. Ñandú fue la apuesta por construir la infraestructura compartida — tokens, componentes y criterios — que los unificara sin frenar a los equipos.</p>
+    <h1 class="case-title">Ñandú</h1>
+    <h2 class="case-subtitle">El lenguaje compartido para escalar el ecosistema digital de OCA</h2>
+    <div class="case-lead">
+      <p>OCA tenía múltiples productos en marcha simultáneamente, cada uno con sus propias decisiones de diseño. Ñandú es la infraestructura compartida — tokens, componentes y criterios — que construí para unificarlos sin frenar a los equipos.</p>
+    </div>
   </header>
 </div>
 
@@ -36,30 +39,48 @@
   </div>
   <div class="hub-meta-bar-item">
     <div class="hm-label">Equipo</div>
-    <div class="hm-value">Diseño · Producto · Front-end</div>
+    <div class="hm-value">Product Design · Front-end · Branding · Producto</div>
   </div>
   <div class="hub-meta-bar-item">
     <div class="hm-label">Alcance</div>
-    <div class="hm-value">Tokens · Componentes · Documentación · Adopción</div>
+    <div class="hm-value">Design System · Foundations · Componentes · Documentación</div>
   </div>
   <div class="hub-meta-bar-item">
     <div class="hm-label">Estado</div>
-    <div class="hm-value">En uso activo · evolución continua</div>
+    <div class="hm-value">En uso y evolución continua</div>
   </div>
 </div>
 
 <div class="img-hero-split reveal">
-  <div class="half"><div class="ph">Ñandú — tokens y foundations · imagen próximamente</div></div>
-  <div class="half"><div class="ph">Componentes · imagen próximamente</div></div>
+  <div class="half"><img src="img/nandu-hero.jpg" alt="Ñandú — foundations, tipografía y paleta de color"></div>
+  <div class="half"><img src="img/2-nandu.jpg" alt="Ñandú — estados de componentes y sistema de inputs"></div>
 </div>
 
 <div class="container">
 
+  <!-- EL PUNTO DE PARTIDA -->
   <section class="case-section reveal">
-    <span class="section-label">Contexto</span>
-    <h2>La fragmentación de OCA no era solo un problema de producto. Era también un problema de diseño.</h2>
-    <p>Cuando llegué a OCA, el equipo de diseño operaba sin una base visual compartida. ePak, el OMS, el Backoffice Comercial y las comunicaciones con clientes eran proyectos en marcha simultáneamente, cada uno con sus propias decisiones de color, tipografía y componentes.</p>
-    <p>Cada nuevo proyecto era una hoja en blanco. Los designers y developers tomaban decisiones por separado. Había archivos de Figma duplicados, componentes sin documentación, criterios que dependían de quién había tomado esa decisión originalmente. Sin sistema, escalar significaba multiplicar la inconsistencia.</p>
+    <span class="section-label">El punto de partida</span>
+    <h2>No faltaban componentes. Faltaba un lenguaje compartido.</h2>
+    <p>Cuando me incorporé a OCA no existía una herramienta de diseño compartida como Figma ni un Design System que unificara criterios. ePak, OMS, Backoffice y otras plataformas se habían desarrollado en distintos momentos, por equipos distintos, cada uno con sus propias decisiones.</p>
+    <p>Las diferencias iban más allá de la interfaz: componentes, tipografías, colores, iconografía, patrones de interacción y hasta la forma de comunicar acciones y mensajes al usuario. Cada nuevo proyecto volvía a resolver problemas que otros equipos ya habían enfrentado.</p>
+    <p>Empecé el proyecto como Product Designer. Como equipo sabíamos que faltaba un Design System, pero fui quien insistió en priorizarlo, ponerle nombre y darle estructura — y terminé liderando su construcción.</p>
+  </section>
+
+</div>
+
+<div class="img-full reveal reveal--image">
+  <img src="img/nandu-antes.jpg" alt="Productos de OCA antes de Ñandú — inconsistencias de botones, accesos, navegación y accesibilidad">
+</div>
+
+<div class="container">
+
+  <!-- EL DESAFÍO -->
+  <section class="case-section reveal">
+    <span class="section-label">El desafío</span>
+    <h2>El objetivo no era construir una librería de componentes.</h2>
+    <p>Necesitábamos crear un sistema que ayudara a tomar decisiones de diseño de forma consistente, facilitara la colaboración entre Diseño y Desarrollo y acompañara el crecimiento del ecosistema digital de OCA.</p>
+    <p>El desafío era encontrar el equilibrio entre estandarizar lo necesario y mantener la flexibilidad suficiente para que cada producto pudiera evolucionar según sus necesidades.</p>
   </section>
 
 </div>
@@ -72,84 +93,111 @@
 
 <div class="container">
 
+  <!-- UNA IDENTIDAD PROPIA -->
   <section class="case-section reveal">
-    <span class="section-label">El desafío</span>
-    <h2>No había sistema. Había archivos.</h2>
-    <p>El problema no era la ausencia de diseño — había trabajo de calidad en varios proyectos. El problema era que ese trabajo no se comunicaba entre productos. Sin tokens, sin componentes compartidos, sin documentación, cada decisión se repetía desde cero.</p>
-    <p>El desafío adicional era el contexto organizacional: OCA venía de décadas sin cultura de diseño sistémico. El sistema debía ser tan claro que developers y PMs pudieran entenderlo sin formación específica en design systems.</p>
-  </section>
-
-  <section class="case-section reveal">
-    <span class="section-label">Construcción</span>
-    <h2>De archivos sueltos a sistema vivo.</h2>
-    <p>La estrategia fue pragmática: no construir en el vacío sino extraer del trabajo real, sistematizar y volver a los productos. ePak fue el primer caso de uso.</p>
-    <div class="step-list">
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <div><h3>Auditoría visual</h3><p>Relevamiento de inconsistencias en productos activos: colores, tipografía, espaciado, iconografía y componentes con variantes no documentadas. El objetivo fue identificar lo que ya existía y lo que se necesitaba estandarizar antes de crear algo nuevo.</p></div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <div><h3>Foundations — tokens de diseño</h3><p>Definición de la capa base del sistema: paleta de color con semántica (primario, secundario, estado, superficie), escala tipográfica, sistema de espaciado y breakpoints. Los tokens se documentaron como variables de Figma para que el mapeo con CSS fuera directo.</p></div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <div><h3>Biblioteca de componentes</h3><p>Construcción atómica: elementos base (botones, inputs, badges, iconos) antes de patrones complejos. Cada componente con variantes documentadas, estados (hover, focus, error, disabled), guías de uso y criterios de accesibilidad mínimos.</p></div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">04</div>
-        <div><h3>Documentación orientada a uso</h3><p>La documentación no describe cómo es el componente — describe cuándo usarlo y cuándo no. Cada patrón tiene ejemplos concretos extraídos de productos reales, lo que hace la guía útil para designers nuevos y para developers que implementan.</p></div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">05</div>
-        <div><h3>Integración y adopción</h3><p>Migración progresiva: ePak fue el primer producto en adoptar el sistema completo. OMS y Backoffice integraron los tokens desde la fase de diseño. Se armaron sesiones de onboarding para developers y un canal de consultas para sostener la adopción sin bloquear workflows.</p></div>
-      </div>
-    </div>
+    <span class="section-label">Una identidad propia</span>
+    <h2>El Design System también necesitaba una identidad propia.</h2>
+    <p>Junto al equipo de Diseño definimos el nombre, la personalidad y la identidad visual del sistema hasta llegar a Ñandú.</p>
+    <p>Elegimos el nombre por lo que representa: el ñandú es un ave nativa de nuestro territorio, veloz y de movimiento constante — una imagen que conecta directamente con la idea de un sistema vivo, en evolución. La letra Ñ, además, refuerza el carácter argentino y federal de OCA, una empresa con presencia en todo el país.</p>
+    <p>Trabajé este proceso junto con Branding: definimos nombre, colores, tipografía y recursos gráficos que luego empezaron a usarse también en piezas institucionales y de comunicación, fortaleciendo una identidad visual consistente dentro de la organización.</p>
   </section>
 
 </div>
 
 <div class="img-full reveal reveal--image">
-  <img src="img/nandu-components.jpg" alt="Componentes del Design System Ñandú" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'ph\'>Componentes Ñandú — imagen próximamente</div>'">
+  <img src="img/nandu-identidad.jpg" alt="Workshop de definición de paleta y color de Ñandú">
 </div>
 
 <div class="container">
 
+  <!-- LAS BASES DEL SISTEMA -->
   <section class="case-section reveal">
-    <span class="section-label">Integración</span>
-    <h2>Ñandú como punto de conexión entre productos.</h2>
-    <p>ePak fue el producto nativo — sus componentes y flujos fueron la primera fuente real de uso del sistema. Eso significó que Ñandú no fue construido en abstracto sino a partir de necesidades concretas: el diseño de pantallas reales fue informando qué componentes agregar, qué patrones documentar y qué tokens ajustar.</p>
-    <p>A medida que el OMS y el Backoffice Comercial entraron en etapa de diseño, la adopción fue más natural: los equipos ya tenían una base. El sistema redujo el tiempo de setup de nuevas pantallas y alineó la comunicación visual entre designers y developers desde el principio del proceso.</p>
-    <p>Hoy Ñandú es la referencia para cualquier producto digital nuevo en OCA. No es solo una biblioteca de componentes — es el criterio compartido que hace que todos los productos se sientan parte del mismo ecosistema.</p>
+    <span class="section-label">Las bases del sistema</span>
+    <h2>A partir de esa identidad construimos la infraestructura del sistema.</h2>
+    <p>Definimos foundations como color, tipografía, espaciado, iconografía y reglas de composición, que dieron lugar a <strong>33 componentes de interfaz documentados</strong> — cada uno con sus propios estados y variantes, no solo una librería genérica de botones e inputs.</p>
+    <p>Cada decisión buscó reducir trabajo repetitivo y permitir que los equipos concentraran su tiempo en resolver problemas de producto, en lugar de volver a diseñar los mismos elementos una y otra vez.</p>
   </section>
 
+  <!-- PENSADO PARA EVOLUCIONAR -->
+  <section class="case-section reveal">
+    <span class="section-label">Pensado para evolucionar</span>
+    <h2>Ñandú no se diseñó como una librería cerrada.</h2>
+    <p>Cada nuevo producto sirvió para validar componentes existentes, detectar nuevos patrones o incorporar mejoras al sistema.</p>
+    <p>ePak fue el primer producto en adoptar el sistema de forma integral y, después, OMS, Backoffice y otros proyectos empezaron a reutilizar sus componentes y patrones, consolidando un lenguaje común entre equipos. Hoy <strong>4 productos digitales de OCA</strong> — ePak, OMS, Backoffice Comercial y Comunicaciones — operan sobre los mismos tokens y componentes base.</p>
+    <p>El Design System evolucionaba junto con los productos. Los productos también fortalecían al Design System.</p>
+  </section>
+
+  <!-- DOCUMENTACIÓN Y ADOPCIÓN -->
+  <section class="case-section reveal">
+    <span class="section-label">Documentación y adopción</span>
+    <h2>Tan importante como construir componentes era facilitar su adopción.</h2>
+    <p>Documentamos componentes, patrones, reglas de uso y buenas prácticas para que cualquier diseñador o desarrollador pudiera entender cuándo utilizar cada solución y mantener la consistencia entre productos.</p>
+    <p>Ñandú dejó de ser una biblioteca de Figma para convertirse en una fuente de verdad compartida entre Diseño, Desarrollo y Producto — hoy, <strong>un 40% de la biblioteca sigue en expansión activa</strong>: un núcleo estable de componentes ya consolidados conviviendo con partes del sistema que evolucionan junto con las necesidades de cada producto nuevo.</p>
+  </section>
+
+  <!-- EVOLUCIÓN CON IA -->
+  <section class="case-section reveal">
+    <span class="section-label">Evolución con IA</span>
+    <h2>Estructuré Ñandú también en Claude Design.</h2>
+    <p>Como parte de la evolución del sistema, estructuré Ñandú en Claude Design, lo que permite consultar componentes, patrones y reglas mediante lenguaje natural.</p>
+    <p>Esta representación facilita mantener el sistema actualizado, compartir conocimiento entre equipos y explorar nuevas formas de integrar asistentes de IA dentro del proceso de diseño y desarrollo.</p>
+    <p>Más que una copia del Design System, Claude Design funciona como una capa de conocimiento sobre Ñandú, preparada para flujos de trabajo asistidos por IA.</p>
+  </section>
+
+</div>
+
+<div class="img-full reveal reveal--image">
+  <img src="img/nandu-claude-design.jpg" alt="Ñandú estructurado en Claude Design — consulta de componentes, tokens y documentación">
+</div>
+
+<div class="container">
+
+  <!-- IMPACTO -->
   <section class="case-section reveal">
     <span class="section-label">Impacto</span>
     <h2>Infraestructura que escala con la empresa.</h2>
+    <div class="arrow-list">
+      <div class="arrow-item">
+        <span class="arrow">→</span>
+        <div><p>Los equipos parten de componentes ya documentados en lugar de definir cada elemento desde cero en cada producto nuevo.</p></div>
+      </div>
+      <div class="arrow-item">
+        <span class="arrow">→</span>
+        <div><p>Corrección de problemas de accesibilidad heredados de las plataformas anteriores: tamaños de texto ilegibles, bajo contraste, wordings inconsistentes y componentes con fallas funcionales.</p></div>
+      </div>
+    </div>
   </section>
 
 </div>
 
 <section class="scale-section reveal">
-  <div class="scale-stats scale-stats--4">
+  <div class="scale-stats">
+    <div class="scale-stat">
+      <div class="scale-num" data-count="33">33</div>
+      <div class="scale-lbl">Componentes de interfaz documentados</div>
+    </div>
     <div class="scale-stat">
       <div class="scale-num" data-count="4">4</div>
-      <div class="scale-lbl">Productos sobre el sistema</div>
+      <div class="scale-lbl">Productos digitales sobre el mismo sistema</div>
     </div>
     <div class="scale-stat">
-      <div class="scale-num" data-count="60" data-prefix="−" data-suffix="%">−60%</div>
-      <div class="scale-lbl">Tiempo de setup de nuevas pantallas</div>
-    </div>
-    <div class="scale-stat">
-      <div class="scale-num" data-count="1">1</div>
-      <div class="scale-lbl">Fuente de verdad visual</div>
-    </div>
-    <div class="scale-stat">
-      <div class="scale-num" data-count="3" data-suffix="+">3+</div>
-      <div class="scale-lbl">Productos futuros con base lista</div>
+      <div class="scale-num" data-count="40" data-suffix="%">40%</div>
+      <div class="scale-lbl">Del sistema en expansión activa</div>
     </div>
   </div>
 </section>
+
+<div class="container">
+
+  <!-- APRENDIZAJES -->
+  <section class="case-section reveal">
+    <span class="section-label">Aprendizajes</span>
+    <h2>Construir un Design System no consiste en diseñar componentes.</h2>
+    <p>Consiste en construir un sistema de decisiones que permita que los productos evolucionen de forma consistente, incluso cuando cambian los equipos, las prioridades y las necesidades del negocio.</p>
+    <p>Trabajar en Ñandú me permitió entender que un Design System genera valor cuando conecta personas, procesos y tecnología, y cuando se convierte en una herramienta que ayuda a toda la organización a diseñar mejor.</p>
+  </section>
+
+</div>
 
 <!-- CASOS RELACIONADOS -->
 <section aria-label="Otros casos de OCA">
