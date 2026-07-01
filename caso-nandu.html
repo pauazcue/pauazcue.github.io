@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ñandú — Design System — OCA · Paula Azcue</title>
+<meta name="description" content="Ñandú: el design system de OCA. Cómo construí la infraestructura visual que unifica ePak, OMS, Backoffice y los productos futuros de la empresa.">
+<link rel="canonical" href="https://pauazcue.github.io/caso-nandu.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-case">
+  <a href="index.html" class="logo" aria-label="Volver al inicio">PA</a>
+  <a href="oca.html" class="back">← OCA</a>
+</nav>
+
+<div class="container">
+  <header class="case-header reveal">
+    <div class="case-eyebrow">
+      <span class="co">OCA</span>
+      <span>2024–presente</span>
+    </div>
+    <h1 class="case-title">Ñandú — Design System</h1>
+    <p class="case-lead">OCA tenía múltiples productos en marcha simultáneamente. Cada uno tomaba decisiones de diseño de forma independiente. Ñandú fue la apuesta por construir la infraestructura compartida — tokens, componentes y criterios — que los unificara sin frenar a los equipos.</p>
+  </header>
+</div>
+
+<div class="hub-meta-bar reveal">
+  <div class="hub-meta-bar-item">
+    <div class="hm-label">Rol</div>
+    <div class="hm-value">Design Lead</div>
+  </div>
+  <div class="hub-meta-bar-item">
+    <div class="hm-label">Equipo</div>
+    <div class="hm-value">Diseño · Producto · Front-end</div>
+  </div>
+  <div class="hub-meta-bar-item">
+    <div class="hm-label">Alcance</div>
+    <div class="hm-value">Tokens · Componentes · Documentación · Adopción</div>
+  </div>
+  <div class="hub-meta-bar-item">
+    <div class="hm-label">Estado</div>
+    <div class="hm-value">En uso activo · evolución continua</div>
+  </div>
+</div>
+
+<div class="img-hero-split reveal">
+  <div class="half"><div class="ph">Ñandú — tokens y foundations · imagen próximamente</div></div>
+  <div class="half"><div class="ph">Componentes · imagen próximamente</div></div>
+</div>
+
+<div class="container">
+
+  <section class="case-section reveal">
+    <span class="section-label">Contexto</span>
+    <h2>La fragmentación de OCA no era solo un problema de producto. Era también un problema de diseño.</h2>
+    <p>Cuando llegué a OCA, el equipo de diseño operaba sin una base visual compartida. ePak, el OMS, el Backoffice Comercial y las comunicaciones con clientes eran proyectos en marcha simultáneamente, cada uno con sus propias decisiones de color, tipografía y componentes.</p>
+    <p>Cada nuevo proyecto era una hoja en blanco. Los designers y developers tomaban decisiones por separado. Había archivos de Figma duplicados, componentes sin documentación, criterios que dependían de quién había tomado esa decisión originalmente. Sin sistema, escalar significaba multiplicar la inconsistencia.</p>
+  </section>
+
+</div>
+
+<section class="hub-pullquote reveal">
+  <div class="container">
+    <p class="hub-pullquote-text">Construir el design system mientras los productos ya estaban en producción implicó un equilibrio constante: <span class="quote-dim">avanzar sin romper lo que ya funcionaba, y hacerlo con un equipo que tenía otras prioridades activas.</span></p>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="case-section reveal">
+    <span class="section-label">El desafío</span>
+    <h2>No había sistema. Había archivos.</h2>
+    <p>El problema no era la ausencia de diseño — había trabajo de calidad en varios proyectos. El problema era que ese trabajo no se comunicaba entre productos. Sin tokens, sin componentes compartidos, sin documentación, cada decisión se repetía desde cero.</p>
+    <p>El desafío adicional era el contexto organizacional: OCA venía de décadas sin cultura de diseño sistémico. El sistema debía ser tan claro que developers y PMs pudieran entenderlo sin formación específica en design systems.</p>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="section-label">Construcción</span>
+    <h2>De archivos sueltos a sistema vivo.</h2>
+    <p>La estrategia fue pragmática: no construir en el vacío sino extraer del trabajo real, sistematizar y volver a los productos. ePak fue el primer caso de uso.</p>
+    <div class="step-list">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div><h3>Auditoría visual</h3><p>Relevamiento de inconsistencias en productos activos: colores, tipografía, espaciado, iconografía y componentes con variantes no documentadas. El objetivo fue identificar lo que ya existía y lo que se necesitaba estandarizar antes de crear algo nuevo.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div><h3>Foundations — tokens de diseño</h3><p>Definición de la capa base del sistema: paleta de color con semántica (primario, secundario, estado, superficie), escala tipográfica, sistema de espaciado y breakpoints. Los tokens se documentaron como variables de Figma para que el mapeo con CSS fuera directo.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div><h3>Biblioteca de componentes</h3><p>Construcción atómica: elementos base (botones, inputs, badges, iconos) antes de patrones complejos. Cada componente con variantes documentadas, estados (hover, focus, error, disabled), guías de uso y criterios de accesibilidad mínimos.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <div><h3>Documentación orientada a uso</h3><p>La documentación no describe cómo es el componente — describe cuándo usarlo y cuándo no. Cada patrón tiene ejemplos concretos extraídos de productos reales, lo que hace la guía útil para designers nuevos y para developers que implementan.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">05</div>
+        <div><h3>Integración y adopción</h3><p>Migración progresiva: ePak fue el primer producto en adoptar el sistema completo. OMS y Backoffice integraron los tokens desde la fase de diseño. Se armaron sesiones de onboarding para developers y un canal de consultas para sostener la adopción sin bloquear workflows.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="img-full reveal reveal--image">
+  <img src="img/nandu-components.jpg" alt="Componentes del Design System Ñandú" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'ph\'>Componentes Ñandú — imagen próximamente</div>'">
+</div>
+
+<div class="container">
+
+  <section class="case-section reveal">
+    <span class="section-label">Integración</span>
+    <h2>Ñandú como punto de conexión entre productos.</h2>
+    <p>ePak fue el producto nativo — sus componentes y flujos fueron la primera fuente real de uso del sistema. Eso significó que Ñandú no fue construido en abstracto sino a partir de necesidades concretas: el diseño de pantallas reales fue informando qué componentes agregar, qué patrones documentar y qué tokens ajustar.</p>
+    <p>A medida que el OMS y el Backoffice Comercial entraron en etapa de diseño, la adopción fue más natural: los equipos ya tenían una base. El sistema redujo el tiempo de setup de nuevas pantallas y alineó la comunicación visual entre designers y developers desde el principio del proceso.</p>
+    <p>Hoy Ñandú es la referencia para cualquier producto digital nuevo en OCA. No es solo una biblioteca de componentes — es el criterio compartido que hace que todos los productos se sientan parte del mismo ecosistema.</p>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="section-label">Impacto</span>
+    <h2>Infraestructura que escala con la empresa.</h2>
+  </section>
+
+</div>
+
+<section class="scale-section reveal">
+  <div class="scale-stats scale-stats--4">
+    <div class="scale-stat">
+      <div class="scale-num" data-count="4">4</div>
+      <div class="scale-lbl">Productos sobre el sistema</div>
+    </div>
+    <div class="scale-stat">
+      <div class="scale-num" data-count="60" data-prefix="−" data-suffix="%">−60%</div>
+      <div class="scale-lbl">Tiempo de setup de nuevas pantallas</div>
+    </div>
+    <div class="scale-stat">
+      <div class="scale-num" data-count="1">1</div>
+      <div class="scale-lbl">Fuente de verdad visual</div>
+    </div>
+    <div class="scale-stat">
+      <div class="scale-num" data-count="3" data-suffix="+">3+</div>
+      <div class="scale-lbl">Productos futuros con base lista</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS RELACIONADOS -->
+<section aria-label="Otros casos de OCA">
+  <div class="work-header">
+    <div>
+      <span class="work-label">OCA</span>
+      <div class="work-title">Otros casos</div>
+    </div>
+  </div>
+  <div class="carousel-track-wrap">
+    <div class="carousel-track" role="list">
+      <a href="caso-epak.html" class="car-card car-card--v" role="listitem">
+        <div class="car-img"><img src="img/epak-hero.jpg" alt="ePak" loading="lazy"></div>
+        <div class="car-info"><span class="car-cat">Plataforma · Envíos corporativos</span><span class="car-name">ePak</span></div>
+      </a>
+      <a href="caso-oms.html" class="car-card car-card--h" role="listitem">
+        <div class="car-img"><img src="img/oms-hero.jpg" alt="OMS" loading="lazy"></div>
+        <div class="car-info"><span class="car-cat">Producto · Gestión de órdenes</span><span class="car-name">OMS</span></div>
+      </a>
+      <a href="caso-oca-backoffice.html" class="car-card car-card--v" role="listitem">
+        <div class="car-img"><img src="img/backoffice-hero.jpg" alt="Backoffice Comercial" loading="lazy"></div>
+        <div class="car-info"><span class="car-cat">Producto · Tarifación y facturación</span><span class="car-name">Backoffice Comercial</span></div>
+      </a>
+      <div class="car-card car-card--h car-card--soon" role="listitem">
+        <div class="car-img car-img-ph"></div>
+        <div class="car-info"><span class="car-cat">Integración · 2023–presente</span><span class="car-name">Plugins e-commerce</span><span class="car-soon-tag">Próximamente</span></div>
+      </div>
+      <div class="car-card car-card--v car-card--soon" role="listitem">
+        <div class="car-img car-img-ph"></div>
+        <div class="car-info"><span class="car-cat">Comunicaciones · 2024–presente</span><span class="car-name">Comunicaciones</span><span class="car-soon-tag">Próximamente</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="hub-nav" aria-label="Empresas">
+  <div class="hub-nav-label">Empresas</div>
+  <div class="hub-nav-grid">
+    <span class="hn-item hn-item--active">
+      <div class="hn-co">OCA · 2023–presente</div>
+      <div class="hn-name">Logística &amp; Producto</div>
+      <div class="hn-desc">Design Lead en la empresa de logística más grande de Argentina.</div>
+    </span>
+    <a href="agrofy.html" class="hn-item">
+      <div class="hn-co">Agrofy · 2021–2023</div>
+      <div class="hn-name">Marketplace Agro</div>
+      <div class="hn-desc">Product Designer en el marketplace agropecuario más grande de Latinoamérica.</div>
+    </a>
+    <a href="metro.html" class="hn-item">
+      <div class="hn-co">Metro · 2017–2020</div>
+      <div class="hn-name">Medios &amp; Marca</div>
+      <div class="hn-desc">Diseño gráfico y digital para Metro 95.1 y el grupo MetroMedia.</div>
+    </a>
+    <span class="hn-item hn-item--soon">
+      <div class="hn-co">Visual &amp; Print</div>
+      <div class="hn-name">Gráfica</div>
+      <div class="hn-desc">Diseño editorial, branding y campañas.</div>
+      <span class="hn-tag">Próximamente</span>
+    </span>
+  </div>
+</nav>
+
+<footer class="site">
+  <span>© 2026 Paula Azcue 🇦🇷</span>
+  <span><a href="index.html" style="text-decoration:none;color:inherit;">pauazcue.github.io</a></span>
+</footer>
+
+<script>
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+function animateCounter(el) {
+  const target = +el.dataset.count;
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
+  const duration = 1400;
+  const start = performance.now();
+  const tick = (now) => {
+    const p = Math.min((now - start) / duration, 1);
+    const val = Math.round((1 - Math.pow(1 - p, 3)) * target);
+    el.textContent = prefix + (val >= 1000 ? val.toLocaleString('es-AR') : val) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+const numObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.scale-num[data-count]').forEach(animateCounter);
+      numObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.scale-section').forEach(el => numObserver.observe(el));
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paula Azcue — Senior Product Designer & Design Lead</title>
-<meta name="description" content="Diseño productos digitales end-to-end. Senior Product Designer & Design Lead con experiencia en agritech, e-commerce, retail, medios y logística.">
+<meta name="description" content="Senior Product Designer & Design Lead. Diseño productos para desafíos complejos combinando estrategia, research y pensamiento sistémico.">
 <meta name="author" content="Paula Azcue">
 <meta property="og:title" content="Paula Azcue — Senior Product Designer & Design Lead">
 <meta property="og:description" content="Diseño productos digitales end-to-end. Agritech, e-commerce, retail, medios, logística.">
@@ -21,239 +21,234 @@
 
 <!-- NAV -->
 <nav class="site-home" id="top">
-  <button class="menu-toggle" id="menuToggle" aria-label="Menú">+</button>
+  <a href="#" class="site-logo">Paula Azcue</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuOverlay">+</button>
 </nav>
 
-<div class="menu-overlay" id="menuOverlay">
+<div class="menu-overlay" id="menuOverlay" role="dialog" aria-label="Menú de navegación" aria-hidden="true">
   <nav class="menu-nav">
     <ul>
-      <li><a href="#resumen" data-close>Resumen</a></li>
-      <li><a href="#portfolio" data-close>Portfolio</a></li>
-      <li><a href="#experiencia" data-close>Experiencia</a></li>
-      <li><a href="#contacto" data-close>Contacto</a></li>
+      <li><a href="#resumen" data-close>Home</a></li>
+      <li><a href="#proyectos" data-close>Work</a></li>
+      <li><a href="#experiencia" data-close>Experience</a></li>
+      <li><a href="#contacto" data-close>Contact</a></li>
     </ul>
   </nav>
 </div>
 
-<!-- HERO -->
-<section id="resumen">
+<!-- HERO: mini-presentación -->
+<section id="resumen" aria-label="Presentación">
   <div class="container">
-    <div class="hero-top">
-      <div class="hero-text">
-        <p class="hero-intro">
-          <strong>¡Hola!</strong> Soy Paula Azcue, diseñadora de productos digitales. <span class="location">Vivo en Buenos Aires, Argentina.</span>
-        </p>
-        <h1 class="hero-display">Diseño productos digitales <em>end-to-end</em>, desde el discovery hasta el detalle de interacción.</h1>
-        <div class="hero-bajada">
-          <span class="label role-tag">Senior Product Designer &amp; Design Lead</span>
-          <p>Trabajé en agritech, e-commerce, retail, medios y logística — liderando equipos de diseño, construyendo <strong>design systems</strong> e impulsando prácticas de <strong>user research</strong> donde no existían.</p>
-          <p>Aporto visión estratégica y método para desenmarañar problemas complejos, ordenar procesos y encontrar soluciones que articulen negocio, usuario y tecnología. He trabajado tanto en empresas con cultura de producto establecida como en contextos donde el diseño todavía se está construyendo.</p>
-        </div>
+    <p class="hero-intro reveal">¡Hola! Soy <strong>Paula Azcue</strong>, diseñadora de productos digitales. Vivo en Buenos Aires, Argentina.</p>
+    <h1 class="hero-display reveal reveal--delay-1">
+      Diseño productos para desafíos complejos.
+    </h1>
+    <span class="hero-role reveal reveal--delay-2">Product Design Lead · OCA</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-label="Sobre mí">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Trabajé en agritech, e-commerce, retail, medios y logística — liderando equipos de diseño, construyendo <strong>design systems</strong> e impulsando prácticas de <strong>user research</strong> donde no existían.</p>
+        <p>Aporto visión estratégica y método para desenmarañar problemas complejos, ordenar procesos y encontrar soluciones que articulen negocio, usuario y tecnología. He trabajado tanto en empresas con cultura de producto establecida como en contextos donde el diseño todavía se está construyendo.</p>
       </div>
-      <div class="hero-photo">
-        <img src="img/img-pau-bw.png" alt="Paula Azcue">
+      <div class="about-photo reveal reveal--delay-1 reveal--image">
+        <img src="img/img-pau-bw.png" alt="Paula Azcue — fotografía en blanco y negro">
       </div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="container">
-    <header class="section-head">
-      <span class="label">Portfolio · Casos de estudio · <span style="color:var(--ink-3);font-weight:400;">en construcción</span></span>
-    </header>
+<!-- PROYECTOS -->
+<section id="proyectos" aria-label="Proyectos">
+
+  <div class="work-header">
+    <div>
+      <span class="work-label">Case Studies</span>
+      <div class="work-title">Work <span class="work-count">(04)</span></div>
+    </div>
   </div>
 
-  <div class="portfolio-grid">
+  <div class="portfolio-grid" role="list">
 
-    <!-- 01 ePak -->
-    <a href="caso-epak.html" class="portfolio-card">
+    <!-- OCA hub -->
+    <a href="oca.html" class="portfolio-card portfolio-card--oca reveal" role="listitem" aria-label="OCA — 3 proyectos">
       <div class="pc-img-wrap">
-        <img src="img/epak-hero.jpg" alt="ePak + Design System Ñandú" onerror="this.parentElement.classList.add('pc-img-ph')">
+        <img src="img/OMS-Hero.jpg" alt="OCA — sistema de gestión" loading="lazy">
+      </div>
+      <div class="pc-img-hover">
+        <img src="img/do_foto-OCA.jpg" alt="OCA — operación logística" loading="lazy">
       </div>
       <div class="pc-body">
-        <div class="pc-meta">
-          <span>OCA · 2023–presente</span>
-          <span class="pc-status">Ver caso →</span>
+        <div class="pc-chips">
+          <span class="pc-chip">2023–presente</span>
+          <span class="pc-chip">Design Lead</span>
         </div>
-        <div class="pc-title">ePak + Design System Ñandú</div>
-        <p class="pc-desc">Rediseño de la plataforma de envíos para clientes corporativos y construcción del design system de OCA alineado con brand design.</p>
+        <div class="pc-title">OCA</div>
       </div>
     </a>
 
-    <!-- 02 OMS -->
-    <a href="caso-oms.html" class="portfolio-card">
+    <!-- Agrofy hub -->
+    <a href="agrofy.html" class="portfolio-card reveal reveal--delay-1" role="listitem" aria-label="Agrofy — 3 proyectos">
       <div class="pc-img-wrap">
-        <img src="img/oms-hero.jpg" alt="OMS — Order Management System" onerror="this.parentElement.classList.add('pc-img-ph')">
+        <img src="img/geo-hero.jpg" alt="Agrofy — marketplace agro" loading="lazy" onerror="this.parentElement.classList.add('pc-img-ph')">
       </div>
       <div class="pc-body">
-        <div class="pc-meta">
-          <span>OCA · 2024–presente</span>
-          <span class="pc-status">Ver caso →</span>
+        <div class="pc-chips">
+          <span class="pc-chip">2020–2023</span>
+          <span class="pc-chip">Sr. Product Designer</span>
         </div>
-        <div class="pc-title">OMS — Order Management System</div>
-        <p class="pc-desc">Diseño de la experiencia del nuevo sistema de gestión de órdenes de OCA, trabajando junto a una agencia externa con validaciones propias de research y flujos.</p>
+        <div class="pc-title">Agrofy</div>
       </div>
     </a>
 
-    <!-- 03 Backoffice -->
-    <a href="caso-oca-backoffice.html" class="portfolio-card">
+    <!-- Metro hub -->
+    <a href="metro.html" class="portfolio-card reveal" role="listitem" aria-label="Metro — grupo de medios, 4 proyectos">
       <div class="pc-img-wrap">
-        <img src="img/backoffice-hero.jpg" alt="Backoffice Comercial — TPF" onerror="this.parentElement.classList.add('pc-img-ph')">
+        <img src="img/img-metro-3.png" alt="MetroMedia — grupo de medios digitales" loading="lazy" onerror="this.parentElement.classList.add('pc-img-ph')">
       </div>
       <div class="pc-body">
-        <div class="pc-meta">
-          <span>OCA · 2024–presente</span>
-          <span class="pc-status">Ver caso →</span>
+        <div class="pc-chips">
+          <span class="pc-chip">2017–2020</span>
+          <span class="pc-chip">Design Lead</span>
         </div>
-        <div class="pc-title">Backoffice Comercial — TPF</div>
-        <p class="pc-desc">Rediseño del sistema de tarifación y facturación de OCA: discovery, flujos desde cero y definición de reglas de negocio para reemplazar un sistema COBOL.</p>
+        <div class="pc-title">Metro</div>
       </div>
     </a>
 
-    <!-- 04 Geo -->
-    <a href="caso-agrofy-geo.html" class="portfolio-card">
-      <div class="pc-img-wrap">
-        <img src="img/geo-hero.jpg" alt="Geolocalización end-to-end" onerror="this.parentElement.classList.add('pc-img-ph')">
-      </div>
-      <div class="pc-body">
-        <div class="pc-meta">
-          <span>Agrofy · 2021–2023</span>
-          <span class="pc-status">Ver caso →</span>
-        </div>
-        <div class="pc-title">Geolocalización end-to-end</div>
-        <p class="pc-desc">Rediseño de la búsqueda incorporando distancia y ubicación del usuario en home, listing y detalle. Multi-país (Argentina, Brasil, Uruguay, Colombia).</p>
-      </div>
-    </a>
-
-    <!-- 05 Listing -->
-    <a href="caso-agrofy-listing.html" class="portfolio-card">
-      <div class="pc-img-wrap">
-        <img src="img/listing-hero.jpg" alt="Listing, filtros y research en ferias" onerror="this.parentElement.classList.add('pc-img-ph')">
-      </div>
-      <div class="pc-body">
-        <div class="pc-meta">
-          <span>Agrofy · 2021–2022</span>
-          <span class="pc-status">Ver caso →</span>
-        </div>
-        <div class="pc-title">Listing, filtros y research en ferias</div>
-        <p class="pc-desc">Iteraciones de layout y arquitectura de filtros validadas con KPIs y entrevistas de guerrilla con productores agropecuarios en Expoagro y Agroactiva.</p>
-      </div>
-    </a>
-
-    <!-- 06 App Agrofy News — próximamente -->
-    <div class="portfolio-card portfolio-card--soon">
+    <!-- Gráfica — próximamente -->
+    <div class="portfolio-card portfolio-card--soon reveal reveal--delay-1" role="listitem" aria-label="Diseño gráfico — próximamente">
       <div class="pc-img-wrap pc-img-ph">
         <span class="pc-ph-text">Próximamente</span>
       </div>
-      <div class="pc-body">
-        <div class="pc-meta">
-          <span>Agrofy · 2020–2021</span>
-          <span class="pc-status" style="color:var(--ink-3)">Próximamente</span>
-        </div>
-        <div class="pc-title">App Agrofy News</div>
-        <p class="pc-desc">Diseño del sitio editorial del grupo y su aplicación mobile, primer proyecto como parte del equipo de Agrofy.</p>
-      </div>
     </div>
 
-    <!-- 07 Metro -->
-    <a href="caso-metro.html" class="portfolio-card portfolio-card--image" style="background-image:url('img/img-metro-3.png'); background-size:cover; background-position:center top;">
-      <div class="pc-img-wrap">
-        <img src="img/img-metro-3.png" alt="Metro 95.1">
-      </div>
-      <div class="pc-body">
-        <div class="pc-meta">
-          <span>FM Metro 95.1 · 2017–2020</span>
-          <span class="pc-status">Ver caso →</span>
-        </div>
-        <div class="pc-title">Producto y transformación en medios</div>
-        <p class="pc-desc">Diseño de producto y brand para Metro 95.1, Infocampo, El Federal, Bacanal y Pulso Urbano — cinco marcas editoriales con personalidades visuales distintas.</p>
-      </div>
-    </a>
+  </div>
+</section>
 
+<!-- MANIFIESTO -->
+<section class="manifesto-section">
+  <div class="container">
+    <p class="manifesto-text reveal"><span class="manifesto-gray">Creo en una práctica del</span> diseño pragmática y en constante evolución. <span class="manifesto-gray">Incorporo nuevas herramientas y formas de trabajo,</span> incluyendo IA generativa y flujos agénticos, para potenciar la investigación, la toma de decisiones y los procesos de diseño.</p>
   </div>
 </section>
 
 <!-- EXPERIENCIA -->
-<section id="experiencia" class="dark">
+<section id="experiencia" class="dark" aria-label="Experiencia profesional">
   <div class="container">
     <header class="section-head">
       <span class="label">Experiencia</span>
     </header>
 
-    <article class="company" id="oca">
-      <div class="period">2023 — Actualidad<span class="duration">2 años 7 meses</span></div>
-      <div>
-        <div class="company-name">OCA</div>
-        <div class="company-context">Logística · Buenos Aires, Argentina</div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Design Lead</em><span class="role-period">Ago 2024 — Presente</span></div>
-          <p>Lidero el equipo de diseño en una transformación tecnológica y de marca de la compañía. Trabajamos en <strong>ePak</strong> (plataforma de envíos para clientes corporativos), sistemas operativos internos, plugins de integración con plataformas de e-commerce (VTEX, Tiendanube, Magento) e identidad visual de sucursales, flota, señalética y eventos.</p>
-          <p>Logramos la <strong>alineación entre brand design y design system</strong>: una visión compartida de cómo la marca se expresa en el mundo físico y en el digital.</p>
-          <p>Impulsé prácticas de <em>discovery</em>, arquitectura de información previa, foco en MVP, UAT y planificación en Gantt. Construí cultura de <em>research</em> con entrevistas y validación temprana, colaboración entre especialistas UI y de flujos, y trabajo cross-funcional con producto, tecnología, negocio y operaciones.</p>
-        </div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Senior Product Designer</em><span class="role-period">Nov 2023 — Jul 2024</span></div>
-          <p>Diseño end-to-end de productos core durante la fase inicial de la transformación: arquitectura de información y user flows del nuevo backoffice comercial, construcción de los flujos del nuevo Order Management System, inicio de la migración de ePak, mejoras en plugins integradores con plataformas de e-commerce y rediseño de comunicaciones con usuarios. Inicié el <strong>Design System de OCA</strong> y fomenté su construcción y adopción. Discovery, entrevistas con usuarios y pruebas de usabilidad.</p>
+    <div class="exp-list">
+
+      <div class="exp-entry">
+        <div class="exp-meta">Ago 2024 — Now</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Design Lead</em>
+            <span class="exp-company">OCA</span>
+          </div>
+          <p>Lidero el equipo de diseño en una transformación tecnológica y de marca de la compañía. El trabajo abarca <strong>ePak</strong> (plataforma de envíos para clientes corporativos), sistemas operativos internos, plugins de integración con plataformas de e-commerce (VTEX, Tiendanube, Magento) e identidad visual de sucursales, flota, señalética y eventos.</p>
+          <p>Logré la <strong>alineación entre brand design y design system</strong>: una visión compartida de cómo la marca se expresa en el mundo físico y en el digital. Instalé prácticas de discovery, entrevistas y validación temprana. Construí trabajo cross-funcional con producto, tecnología, negocio y operaciones.</p>
         </div>
       </div>
-    </article>
 
-    <article class="company" id="agrofy">
-      <div class="period">2020 — 2023<span class="duration">3 años</span></div>
-      <div>
-        <div class="company-name">Agrofy</div>
-        <div class="company-context">Agritech · Marketplace · LATAM</div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Senior Product Designer</em><span class="role-period">May 2021 — Oct 2023</span></div>
-          <p>Marketplace agro líder en Latinoamérica. Trabajé durante la etapa de expansión regional a Brasil, Uruguay y Colombia.</p>
-          <p><strong>Geolocalización end-to-end.</strong> Rediseño de la búsqueda incorporando distancia y ubicación del usuario en home, listing y detalle. Reducción del rebote y mejora en conversión, especialmente en maquinaria pesada donde el flete es una variable crítica de decisión.</p>
-          <p><strong>Listing, filtros y detalle de producto.</strong> Iteraciones de layout y arquitectura para aumentar clicks al detalle. Reducción de fricciones en formularios y aprovechamiento de datos del usuario logueado.</p>
-          <p><strong>Aportes.</strong> Construí alianzas con el equipo comercial para acceder a Expoagro y Agroactiva, donde realizamos entrevistas de guerrilla y pruebas con usuarios en el stand. Construí el <strong>Design System</strong> con el equipo de librería para consumo desde otros equipos. Trabajé con KPIs, mapas de calor y analytics. Presentaciones a CEO, Head of Product y negocio.</p>
+      <div class="exp-entry">
+        <div class="exp-meta">Nov 2023 — Jul 2024</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Senior Product Designer</em>
+            <span class="exp-company">OCA</span>
+          </div>
+          <p>Diseño end-to-end de productos core en la fase inicial de la transformación: arquitectura de información y user flows del nuevo backoffice comercial, flujos del nuevo Order Management System, inicio de la migración de ePak y mejoras en plugins integradores. Inicié el <strong>Design System de OCA</strong> y fomenté su construcción y adopción. Discovery, entrevistas con usuarios y pruebas de usabilidad.</p>
         </div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Semi-Senior Product Designer</em><span class="role-period">Nov 2020 — Abr 2021</span></div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-meta">May 2021 — Oct 2023</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Senior Product Designer</em>
+            <span class="exp-company">Agrofy</span>
+          </div>
+          <p>Marketplace agro líder en Latinoamérica. Trabajo en la etapa de expansión regional a Brasil, Uruguay y Colombia.</p>
+          <p><strong>Geolocalización end-to-end.</strong> Rediseño de la búsqueda con distancia y ubicación del usuario en home, listing y detalle. Reducción del rebote y mejora en conversión, especialmente en maquinaria pesada donde el flete es variable crítica de decisión.</p>
+          <p><strong>Listing, filtros y detalle de producto.</strong> Iteraciones de layout y arquitectura para aumentar clicks al detalle. Reducción de fricciones en formularios con datos del usuario logueado.</p>
+          <p><strong>Aportes transversales.</strong> Alianzas con el equipo comercial para acceder a Expoagro y Agroactiva, donde realizamos entrevistas de guerrilla con productores agropecuarios en el stand. Construcción del <strong>Design System</strong> con el equipo de librería. Trabajo con KPIs, mapas de calor y analytics. Presentaciones a CEO, Head of Product y negocio.</p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-meta">Nov 2020 — Abr 2021</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Semi-Senior Product Designer</em>
+            <span class="exp-company">Agrofy</span>
+          </div>
           <p>Diseño de apps para clientes externos (YPF, La Rural) y diseño del sitio editorial <em>Agrofy News</em> con su app.</p>
         </div>
       </div>
-    </article>
 
-    <article class="company" id="metro">
-      <div class="period">2017 — 2020<span class="duration">3 años 9 meses</span></div>
-      <div>
-        <div class="company-name">FM Metro · Infocampo · El Federal · Bacanal · Pulso Urbano</div>
-        <div class="company-context">Medios · 5 marcas editoriales</div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Design Lead</em><span class="role-period">Mar 2018 — Nov 2020</span></div>
-          <p>Lideré la dirección de arte y el diseño de producto digital para las cinco marcas: Metro 95.1 (radio), Infocampo (agro), El Federal (interés general), Bacanal (gastronomía) y Pulso Urbano (urbano/cultural). Manteniendo coherencia de sistema y diferenciación visual entre cada personalidad editorial. Presentaciones de proyecto a CEO y Gerentes.</p>
+      <div class="exp-entry">
+        <div class="exp-meta">Mar 2018 — Nov 2020</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Design Lead</em>
+            <span class="exp-company">FM Metro · Infocampo · El Federal · Bacanal · Pulso Urbano</span>
+          </div>
+          <p>Lideré la dirección de arte y el diseño de producto digital para las cinco marcas: Metro 95.1 (radio), Infocampo (agro), El Federal (interés general), Bacanal (gastronomía) y Pulso Urbano (urbano/cultural). Coherencia de sistema y diferenciación visual entre cada personalidad editorial. Presentaciones a CEO y Gerentes.</p>
         </div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Senior Product &amp; Brand Designer</em><span class="role-period">Mar 2017 — Feb 2018</span></div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-meta">Mar 2017 — Feb 2018</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Senior Product &amp; Brand Designer</em>
+            <span class="exp-company">FM Metro · Infocampo · El Federal</span>
+          </div>
           <p>Diseño visual de interfaces web para cada marca, map flows, wireframes y prototipos en baja, media y alta fidelidad. User research, pruebas con usuarios y análisis de usabilidad. Branding y dirección de arte, diseño de campañas gráficas y piezas digitales y editoriales.</p>
         </div>
       </div>
-    </article>
 
-    <article class="company" id="evfp">
-      <div class="period">2009 — 2017<span class="duration">7 años 8 meses</span></div>
-      <div>
-        <div class="company-name">EVFP (actualmente WideOnline)</div>
-        <div class="company-context">Estudio de diseño · Arquitectura, interiorismo y muebles</div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Design Lead</em><span class="role-period">Jun 2012 — Ene 2017</span></div>
-          <p>Coordinación del equipo de diseño, dirección de arte, presentaciones a clientes, entrevistas laborales y manejo de proveedores. Clientes: Estudio Oppel, Cocinas DeOtroTiempo, Barugel Azulay, Kommerling, Hunter Douglas, Estudio Shilton-Stefani y revista TGM.</p>
+      <div class="exp-entry">
+        <div class="exp-meta">Jun 2012 — Ene 2017</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Design Lead</em>
+            <span class="exp-company">EVFP · WideOnline</span>
+          </div>
+          <p>Coordinación del equipo de diseño, dirección de arte, presentaciones a clientes y manejo de proveedores. Clientes: Estudio Oppel, Cocinas DeOtroTiempo, Barugel Azulay, Kommerling, Hunter Douglas, Estudio Shilton-Stefani y revista TGM.</p>
         </div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Senior Graphic &amp; Web Designer</em><span class="role-period">Jun 2010 — May 2012</span></div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-meta">Jun 2010 — May 2012</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Senior Graphic &amp; Web Designer</em>
+            <span class="exp-company">EVFP</span>
+          </div>
           <p>Diseño visual de interfaces web, diseño editorial y pie de imprenta, branding para terceros, retoque digital.</p>
         </div>
-        <div class="role">
-          <div class="role-header"><em class="role-title">Semi-Senior Graphic &amp; Web Designer</em><span class="role-period">Jun 2009 — May 2010</span></div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-meta">Jun 2009 — May 2010</div>
+        <div class="exp-content">
+          <div class="exp-header">
+            <em class="exp-role">Semi-Senior Graphic &amp; Web Designer</em>
+            <span class="exp-company">EVFP</span>
+          </div>
           <p>Diseño editorial, branding y proyectos web bajo coordinación del equipo senior.</p>
         </div>
       </div>
-    </article>
+
+    </div>
 
     <!-- Extras -->
     <div class="extras">
@@ -272,22 +267,22 @@
     </div>
 
     <!-- Aptitudes -->
-    <div class="skills-grid">
+    <div class="skills-grid" aria-label="Aptitudes">
       <div class="skills-group">
-        <div class="sg-label">Diseño de producto digital</div>
+        <div class="sg-label">Diseño de Producto Digital</div>
         <p>Product Design end-to-end · UX/UI · Diseño de interacción · Arquitectura de la información · Mobile &amp; Web</p>
       </div>
       <div class="skills-group">
-        <div class="sg-label">Discovery y validación</div>
-        <p>Discovery · User Research · Pruebas de usabilidad · Field Research · Entrevistas a usuarios</p>
+        <div class="sg-label">Discovery y Validación</div>
+        <p>Discovery · User Research · Pruebas de usabilidad · Field Research · Entrevistas con usuarios</p>
       </div>
       <div class="skills-group">
-        <div class="sg-label">Sistemas y escala</div>
+        <div class="sg-label">Sistemas y Escala</div>
         <p>Design Systems · Component Libraries · Design Tokens · Accesibilidad</p>
       </div>
       <div class="skills-group">
         <div class="sg-label">Liderazgo y estrategia</div>
-        <p>Design Leadership · Estrategia de producto · Cross-functional collaboration</p>
+        <p>Design Leadership · Estrategia de producto · Colaboración cross-funcional</p>
       </div>
       <div class="skills-group">
         <div class="sg-label">Herramientas</div>
@@ -295,16 +290,16 @@
       </div>
       <div class="skills-group">
         <div class="sg-label">AI workflows</div>
-        <p>Claude · ChatGPT · IA aplicada a discovery, análisis de research, prototipado y co-creación de artefactos de diseño</p>
+        <p>Claude · ChatGPT · IA generativa aplicada a discovery, análisis de research, prototipado y co-creación de artefactos de diseño</p>
       </div>
     </div>
 
     <!-- Educación y Certs -->
-    <div class="edu-certs">
+    <div class="edu-certs" aria-label="Educación y certificaciones">
       <div class="edu-col">
         <div class="sg-label">Educación</div>
         <div class="edu-item">
-          <strong>Tecnicatura en Diseño Gráfico</strong>
+          <strong>Diseño Gráfico</strong>
           <div class="ed-meta">Universidad de Buenos Aires (UBA) · 2002–2007</div>
         </div>
         <div class="edu-item">
@@ -323,7 +318,7 @@
           <li>Mobile User Experience (UX) Design</li>
           <li>UX Writing avanzado</li>
           <li>Interaction Design for Usability</li>
-          <li>Emprending — Gestión y Marketing · UBA 2018–2019</li>
+          <li>Emprendimiento — Gestión y Marketing · UBA 2018–2019</li>
           <li>Marketing Digital · Gobierno de la Ciudad de Buenos Aires</li>
         </ul>
       </div>
@@ -346,14 +341,23 @@
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto">
+<section id="contacto" aria-label="Contacto">
   <div class="container">
     <h2 class="contact-title">Estemos en contacto.</h2>
     <p class="contact-location">🇦🇷 Villa Crespo, Buenos Aires, Argentina</p>
     <div class="contact-links">
-      <a href="mailto:azcuep@gmail.com" class="contact-link">Email azcuep@gmail.com →</a>
-      <a href="https://linkedin.com/in/paulazcue" target="_blank" class="contact-link">LinkedIn linkedin.com/in/paulazcue →</a>
-      <a href="Paula_Azcue_CV.pdf" target="_blank" class="contact-link">CV PDF Descargar ↓</a>
+      <a href="mailto:azcuep@gmail.com" class="contact-link">
+        <span>Email — azcuep@gmail.com</span>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://linkedin.com/in/paulazcue" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <span>LinkedIn — linkedin.com/in/paulazcue</span>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="Paula_Azcue_CV.pdf" target="_blank" class="contact-link">
+        <span>CV PDF — Descargar</span>
+        <span class="contact-arrow">⬇</span>
+      </a>
     </div>
   </div>
 </section>
@@ -364,22 +368,55 @@
 </footer>
 
 <script>
-// Menu toggle
 const toggle = document.getElementById('menuToggle');
 const overlay = document.getElementById('menuOverlay');
+
 toggle.addEventListener('click', () => {
   const open = overlay.classList.toggle('is-open');
   toggle.classList.toggle('open', open);
   toggle.textContent = open ? '×' : '+';
+  toggle.setAttribute('aria-expanded', open);
+  overlay.setAttribute('aria-hidden', !open);
+  if (open) overlay.querySelector('a').focus();
 });
+
 overlay.querySelectorAll('[data-close]').forEach(el => {
   el.addEventListener('click', () => {
     overlay.classList.remove('is-open');
     toggle.classList.remove('open');
     toggle.textContent = '+';
+    toggle.setAttribute('aria-expanded', false);
+    overlay.setAttribute('aria-hidden', true);
+    toggle.focus();
   });
 });
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+    overlay.classList.remove('is-open');
+    toggle.classList.remove('open');
+    toggle.textContent = '+';
+    toggle.setAttribute('aria-expanded', false);
+    overlay.setAttribute('aria-hidden', true);
+    toggle.focus();
+  }
+});
+
+const nav = document.querySelector('nav.site-home');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
 </script>
-<script src="animations.js" defer></script>
 </body>
 </html>

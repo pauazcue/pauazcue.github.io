@@ -3,61 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Geolocalización — Agrofy — Paula Azcue</title>
-<meta name="description" content="Rediseño de la búsqueda en Agrofy incorporando distancia y ubicación del usuario. Multi-país.">
+<title>Geo — Geolocalización — Agrofy · Paula Azcue</title>
+<meta name="description" content="Rediseño de la búsqueda en Agrofy incorporando distancia y ubicación del usuario. Multi-país: Argentina, Brasil, Uruguay, Colombia.">
+<link rel="canonical" href="https://pauazcue.github.io/caso-agrofy-geo.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <nav class="site-case">
-  <a href="index.html" class="logo">PA</a>
-  <a href="index.html" class="back">← volver al inicio</a>
+  <a href="index.html" class="logo" aria-label="Volver al inicio">PA</a>
+  <a href="agrofy.html" class="back">← Agrofy</a>
 </nav>
+
 <div class="container">
-  <header class="case-header">
-    <div class="case-eyebrow"><span class="co">Agrofy</span><span>2021</span></div>
-    <h1 class="case-title">Un comprador en Buenos Aires no debería descubrir en el detalle del producto que el flete hace inviable la compra.</h1>
-    <p class="case-lead">Agrofy es el marketplace agro más grande de Latinoamérica. La plataforma conectaba compradores y vendedores en cuatro países — pero no mostraba la distancia entre el comprador y el producto. Eso generaba un problema silencioso con consecuencias reales.</p>
-    <div class="case-meta"><div class="case-meta-item"><div class="mi-label">Rol</div><div class="mi-value">Senior Product Designer</div></div>
-<div class="case-meta-item"><div class="mi-label">Año</div><div class="mi-value">2021</div></div>
-<div class="case-meta-item"><div class="mi-label">Alcance</div><div class="mi-value">Home · Listing · Detalle · Multi-país</div></div>
-<div class="case-meta-item"><div class="mi-label">Países</div><div class="mi-value">Argentina · Brasil · Uruguay · Colombia</div></div></div>
+  <header class="case-header reveal">
+    <div class="case-eyebrow">
+      <span class="co">Agrofy</span>
+      <span>2021</span>
+    </div>
+    <h1 class="case-title">Geo — Geolocalización</h1>
+    <p class="case-lead">Un comprador en Buenos Aires no debería descubrir en el detalle del producto que el flete hace inviable la compra. Agrofy conectaba compradores y vendedores en cuatro países — pero no mostraba la distancia. Eso generaba un problema silencioso con consecuencias reales.</p>
   </header>
-</div><div class="container"><div class="img-wide"><div class="img-ph">Geolocalización en Agrofy · imagen principal · próximamente</div></div></div><div class="container">
-  <section class="case-section">
+</div>
+
+<div class="hub-meta-bar reveal">
+  <div class="hub-meta-bar-item">
+    <div class="hm-label">Rol</div>
+    <div class="hm-value">Senior Product Designer</div>
+  </div>
+  <div class="hub-meta-bar-item">
+    <div class="hm-label">Año</div>
+    <div class="hm-value">2021</div>
+  </div>
+  <div class="hub-meta-bar-item">
+    <div class="hm-label">Alcance</div>
+    <div class="hm-value">Home · Listing · Detalle · Multi-país</div>
+  </div>
+  <div class="hub-meta-bar-item">
+    <div class="hm-label">Países</div>
+    <div class="hm-value">Argentina · Brasil · Uruguay · Colombia</div>
+  </div>
+</div>
+
+<div class="img-hero-split reveal">
+  <div class="half"><div class="ph">Geo — pantalla principal · imagen próximamente</div></div>
+  <div class="half"><div class="ph">Flujos de geolocalización · imagen próximamente</div></div>
+</div>
+
+<div class="container">
+
+  <section class="case-section reveal">
     <span class="section-label">Contexto</span>
     <h2>El marketplace agro más grande de Latinoamérica tenía un problema invisible.</h2>
-    <p>Agrofy operaba en cuatro países y conectaba compradores y vendedores de maquinaria agrícola, semillas, insumos y servicios. En este mercado, el lugar de origen del producto no es un dato secundario — es una variable que puede hacer inviable una compra. Una cosechadora en Santa Fe no es lo mismo que una cosechadora en Formosa.</p><p>El resultado era predecible: compradores que llegaban al detalle, veían la ubicación del vendedor, calculaban el flete y abandonaban. Sin convertir. Del otro lado, los vendedores recibían contactos de compradores que nunca iban a poder comprarles — leads sin valor real.</p>
+    <p>Agrofy operaba en cuatro países y conectaba compradores y vendedores de maquinaria agrícola, semillas, insumos y servicios. En este mercado, el lugar de origen del producto no es un dato secundario — es una variable que puede hacer inviable una compra. Una cosechadora en Santa Fe no es lo mismo que una cosechadora en Formosa.</p>
+    <p>El resultado era predecible: compradores que llegaban al detalle, veían la ubicación del vendedor, calculaban el flete y abandonaban. Sin convertir. Del otro lado, los vendedores recibían contactos de compradores que nunca iban a poder comprarles — leads sin valor real.</p>
   </section>
+
 </div>
-  <section class="case-section dark">
+
+<section class="hub-pullquote reveal">
+  <div class="container">
+    <p class="hub-pullquote-text">"Me llaman de 800 km de distancia para preguntar el precio. Cuando les digo el flete, cuelgan. <span class="quote-dim">Son leads que no sirven para nada."</span></p>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="case-section reveal">
     <span class="section-label">El discovery</span>
-    <h2>El problema se confirmó hablando con vendedores, no mirando métricas.</h2>
-    <p>Las métricas mostraban el rebote pero no explicaban el por qué. El primer paso fue hablar directamente con los vendedores de la plataforma — los más afectados por los leads sin calidad.</p><div class="quote-block"><p>Me llaman de 800 km de distancia para preguntar el precio. Cuando les digo el flete, cuelgan. Son leads que no sirven para nada.</p></div><p>También entrevistamos compradores y observamos patrones de búsqueda. El benchmark con plataformas similares confirmó que la distancia y la ubicación eran datos presentes en la mayoría de los competidores, especialmente para productos de alto valor y difícil transporte.</p>
+    <h2>Las métricas mostraban el rebote. Los vendedores explicaban el por qué.</h2>
+    <p>Las métricas mostraban el rebote pero no explicaban el por qué. El primer paso fue hablar directamente con los vendedores de la plataforma — los más afectados por los leads sin calidad.</p>
+    <p>También entrevistamos compradores y observamos patrones de búsqueda. El benchmark con plataformas similares confirmó que la distancia y la ubicación eran datos presentes en la mayoría de los competidores, especialmente para productos de alto valor y difícil transporte.</p>
   </section>
-<div class="container"><div class="img-wide"><div class="img-ph">Flujos y pantallas de geolocalización · próximamente</div></div></div><div class="container">
-  <section class="case-section">
+
+  <section class="case-section reveal">
     <span class="section-label">El proceso</span>
     <h2>Diseño end-to-end: desde la búsqueda hasta el contacto con el vendedor.</h2>
-    <div class="step-list"><div class="step"><div class="step-num">01</div><div><h3>Definición de casuísticas</h3><p>Mapeamos todos los escenarios posibles: compradores con y sin ubicación habilitada, usuarios anónimos vs. logueados, resultados dentro y fuera del radio relevante, comportamiento por tipo de producto. Cada casuística con su solución específica.</p></div></div><div class="step"><div class="step-num">02</div><div><h3>Diseño del flujo en home y listing</h3><p>Incorporamos la opción de ingresar o detectar la ubicación desde el home, con propagación al listing y al detalle. El usuario podía buscar 'tractores cerca de Rosario' y ver resultados ordenados por distancia.</p></div></div><div class="step"><div class="step-num">03</div><div><h3>Rediseño del detalle de producto</h3><p>En el detalle, la distancia al vendedor pasó a ser un dato prominente, junto a una estimación de flete cuando era posible calcularlo.</p></div></div><div class="step"><div class="step-num">04</div><div><h3>Validación con CEO y MVP escalonado</h3><p>Por el impacto en el modelo de leads, presentamos el diseño al CEO y al Head of Product. El lanzamiento fue progresivo: primero en Argentina, luego a Brasil, Uruguay y Colombia.</p></div></div></div>
+    <div class="step-list">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div><h3>Definición de casuísticas</h3><p>Mapeamos todos los escenarios posibles: compradores con y sin ubicación habilitada, usuarios anónimos vs. logueados, resultados dentro y fuera del radio relevante, comportamiento por tipo de producto. Cada casuística con su solución específica.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div><h3>Diseño del flujo en home y listing</h3><p>Incorporamos la opción de ingresar o detectar la ubicación desde el home, con propagación al listing y al detalle. El usuario podía buscar "tractores cerca de Rosario" y ver resultados ordenados por distancia.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div><h3>Rediseño del detalle de producto</h3><p>En el detalle, la distancia al vendedor pasó a ser un dato prominente, junto a una estimación de flete cuando era posible calcularlo.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <div><h3>Validación con CEO y MVP escalonado</h3><p>Por el impacto en el modelo de leads, presentamos el diseño al CEO y al Head of Product. El lanzamiento fue progresivo: primero en Argentina, luego a Brasil, Uruguay y Colombia.</p></div>
+      </div>
+    </div>
   </section>
-</div><div class="container">
-  <section class="case-section">
+
+  <section class="case-section reveal">
     <span class="section-label">El impacto</span>
     <h2>Menos rebote, mejores leads, más confianza en la plataforma.</h2>
-    <p>La incorporación de la distancia como variable visible desde el inicio del recorrido redujo el rebote en el detalle de producto, especialmente en las categorías de maquinaria pesada donde el flete es más determinante.</p><p>Del lado de los vendedores, la mejora en la calidad de los leads fue el cambio más valorado: los contactos que llegaban tenían mayor intención real de compra porque ya sabían dónde estaba el producto antes de iniciar la conversación.</p>
+    <p>La incorporación de la distancia como variable visible desde el inicio del recorrido redujo el rebote en el detalle de producto, especialmente en las categorías de maquinaria pesada donde el flete es más determinante.</p>
+    <p>Del lado de los vendedores, la mejora en la calidad de los leads fue el cambio más valorado: los contactos que llegaban tenían mayor intención real de compra porque ya sabían dónde estaba el producto antes de iniciar la conversación.</p>
   </section>
-</div><div class="container">
-  <div class="next-case">
-    <span class="nc-label">// siguiente caso</span>
-    <a href="caso-agrofy-listing.html">Listing, filtros y research en ferias →</a>
+
+</div>
+
+<!-- CASOS RELACIONADOS -->
+<section aria-label="Otros casos de Agrofy">
+  <div class="work-header">
+    <div>
+      <span class="work-label">Agrofy</span>
+      <div class="work-title">Otros casos</div>
+    </div>
   </div>
-</div><footer>
-  <span>© 2026 Paula Azcue</span>
-  <span>🇦🇷 Buenos Aires, Argentina</span>
+  <div class="carousel-track-wrap">
+    <div class="carousel-track" role="list">
+      <a href="caso-agrofy-listing.html" class="car-card car-card--h" role="listitem">
+        <div class="car-img"><img src="img/agrofy-listing-hero.jpg" alt="Listing" loading="lazy"></div>
+        <div class="car-info"><span class="car-cat">Producto · Catálogo</span><span class="car-name">Listing</span></div>
+      </a>
+      <div class="car-card car-card--v car-card--soon" role="listitem">
+        <div class="car-img car-img-ph"></div>
+        <div class="car-info"><span class="car-cat">Producto · Leads</span><span class="car-name">Leads · Detalle de producto</span><span class="car-soon-tag">Próximamente</span></div>
+      </div>
+      <div class="car-card car-card--h car-card--soon" role="listitem">
+        <div class="car-img car-img-ph"></div>
+        <div class="car-info"><span class="car-cat">Producto · Contenido</span><span class="car-name">Agrofy News</span><span class="car-soon-tag">Próximamente</span></div>
+      </div>
+      <div class="car-card car-card--v car-card--soon" role="listitem">
+        <div class="car-img car-img-ph"></div>
+        <div class="car-info"><span class="car-cat">Research · Ferias</span><span class="car-name">Research en ferias</span><span class="car-soon-tag">Próximamente</span></div>
+      </div>
+      <div class="car-card car-card--h car-card--soon" role="listitem">
+        <div class="car-img car-img-ph"></div>
+        <div class="car-info"><span class="car-cat">Producto · Agro</span><span class="car-name">YPF Agro</span><span class="car-soon-tag">Próximamente</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="hub-nav" aria-label="Empresas">
+  <div class="hub-nav-label">Empresas</div>
+  <div class="hub-nav-grid">
+    <a href="oca.html" class="hn-item">
+      <div class="hn-co">OCA · 2023–presente</div>
+      <div class="hn-name">Logística &amp; Producto</div>
+      <div class="hn-desc">Design Lead en la empresa de logística más grande de Argentina.</div>
+    </a>
+    <span class="hn-item hn-item--active">
+      <div class="hn-co">Agrofy · 2021–2023</div>
+      <div class="hn-name">Marketplace Agro</div>
+      <div class="hn-desc">Product Designer en el marketplace agropecuario más grande de Latinoamérica.</div>
+    </span>
+    <a href="metro.html" class="hn-item">
+      <div class="hn-co">Metro · 2017–2020</div>
+      <div class="hn-name">Medios &amp; Marca</div>
+      <div class="hn-desc">Diseño gráfico y digital para Metro 95.1 y el grupo MetroMedia.</div>
+    </a>
+    <span class="hn-item hn-item--soon">
+      <div class="hn-co">Visual &amp; Print</div>
+      <div class="hn-name">Gráfica</div>
+      <div class="hn-desc">Diseño editorial, branding y campañas.</div>
+      <span class="hn-tag">Próximamente</span>
+    </span>
+  </div>
+</nav>
+
+<footer class="site">
+  <span>© 2026 Paula Azcue 🇦🇷</span>
+  <span><a href="index.html" style="text-decoration:none;color:inherit;">pauazcue.github.io</a></span>
 </footer>
-<script src="animations.js" defer></script>
+
+<script>
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
 </body>
 </html>
