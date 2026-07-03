@@ -890,11 +890,38 @@ footer { padding: 24px 80px; border-top: 1px solid var(--border); font-family: v
   .hero-display { font-size: clamp(36px, 9vw, 56px); margin-bottom: 28px; }
   .hero-intro { margin-bottom: 32px; }
 
-  /* About */
+  /* About — foto arriba, texto abajo en mobile */
   #about { padding: 48px 0; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
-  .about-photo { max-width: 180px; }
+  .about-photo { max-width: 180px; margin: 0 auto; order: -1; }
   .about-text p { font-size: 16px; max-width: 100%; }
+
+  /* Case sections — una sola columna, label arriba del título */
+  .case-section {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 12px;
+  }
+  .case-section > * { grid-column: 1; }
+  .case-section > .section-label {
+    grid-row: auto;
+    position: static;
+    padding-top: 0;
+  }
+  .case-section > h2 { grid-row: auto; }
+  .case-section p,
+  .case-section h2 { max-width: 100%; }
+
+  /* Hub meta bar — columna, sin padding lateral enorme */
+  .hub-meta-bar { flex-direction: column; }
+  .hub-meta-bar-item { padding: 16px 20px; }
+
+  /* Scale stats — 2 columnas para que los números no se corten */
+  .scale-stats,
+  .scale-stats--4 { grid-template-columns: 1fr 1fr; }
+  .scale-stat { padding: 32px 20px; }
+  .scale-num { font-size: clamp(36px, 10vw, 52px); }
+  .scale-ops { padding: 16px 20px; }
 
   /* Portfolio / Hub */
   .portfolio-grid { grid-template-columns: 1fr; }
