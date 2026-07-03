@@ -97,6 +97,14 @@ nav.site-case .back {
   border-bottom: 1px solid transparent; transition: border-color 0.2s;
 }
 nav.site-case .back:hover { border-bottom-color: var(--red); }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.lang-switch {
+  font-family: var(--mono); font-size: 10px; color: var(--ink-3);
+  text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em;
+  border: 1px solid var(--border); padding: 4px 9px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.lang-switch:hover { color: var(--ink); border-color: var(--ink-3); }
 
 /* ── LAYOUT ─────────────────────────────────── */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 80px; }
