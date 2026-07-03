@@ -902,19 +902,22 @@ footer { padding: 24px 80px; border-top: 1px solid var(--border); font-family: v
     column-gap: 0;
     row-gap: 12px;
   }
-  .case-section > * { grid-column: 1; }
+  .case-section > *,
+  .case-section > h2,
   .case-section > .section-label {
-    grid-row: auto;
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+  .case-section > .section-label {
     position: static;
     padding-top: 0;
   }
-  .case-section > h2 { grid-row: auto; }
   .case-section p,
   .case-section h2 { max-width: 100%; }
 
-  /* Hub meta bar — columna, sin padding lateral enorme */
+  /* Hub meta bar — columna, más compacta */
   .hub-meta-bar { flex-direction: column; }
-  .hub-meta-bar-item { padding: 16px 20px; }
+  .hub-meta-bar-item { padding: 10px 20px; }
 
   /* Scale stats — 2 columnas para que los números no se corten */
   .scale-stats,
@@ -922,6 +925,37 @@ footer { padding: 24px 80px; border-top: 1px solid var(--border); font-family: v
   .scale-stat { padding: 32px 20px; }
   .scale-num { font-size: clamp(36px, 10vw, 52px); }
   .scale-ops { padding: 16px 20px; }
+
+  /* Work carousel — que se vea un poco de la card anterior/siguiente */
+  .carousel-track-wrap { padding: 0 24px; margin-top: 24px; }
+  .car-card { flex: 0 0 72vw; max-width: 240px; }
+  .car-card--h { flex: 0 0 80vw; max-width: 300px; }
+
+  /* Hub nav (empresas) — una columna, sin bordes laterales */
+  .hub-nav { margin-top: 48px; }
+  .hub-nav-label { padding: 16px 20px 0; }
+  .hub-nav-grid { grid-template-columns: 1fr; }
+  .hn-item {
+    padding: 24px 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .hn-item:last-child { border-bottom: none; }
+
+  /* Footer — menos margen lateral */
+  footer.site { padding: 16px 20px; }
+
+  /* Experiencia (home) — una sola columna */
+  .exp-entry {
+    grid-template-columns: 1fr;
+    gap: 6px 0;
+    padding: 24px 0;
+  }
+  .exp-meta { padding-top: 0; }
+  .exp-header { flex-wrap: wrap; }
+
+  /* Aptitudes — de a dos columnas en vez de una lista larga */
+  .skills-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
 
   /* Portfolio / Hub */
   .portfolio-grid { grid-template-columns: 1fr; }
