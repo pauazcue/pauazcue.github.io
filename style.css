@@ -1005,6 +1005,10 @@ a.hn-item:hover::after { transform: translateX(4px); }
   /* Aptitudes — de a dos columnas en vez de una lista larga */
   .skills-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
 
+  /* Educación / Certificaciones / Reconocimientos — una columna */
+  .edu-certs { grid-template-columns: 1fr; gap: 32px; }
+  .lang-item { flex-wrap: wrap; gap: 4px; }
+
   /* Portfolio / Hub */
   .portfolio-grid { grid-template-columns: 1fr; }
   .portfolio-card { aspect-ratio: 3/2; }
