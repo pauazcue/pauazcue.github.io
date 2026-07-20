@@ -13,29 +13,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paula Azcue — Senior Product Designer & Design Lead</title>
-<meta name="description" content="Senior Product Designer & Design Lead. Diseño productos para desafíos complejos combinando estrategia, research y pensamiento sistémico.">
+<meta name="description" content="Senior Product Designer & Design Lead. Diseño productos y experiencias para desafíos complejos combinando estrategia, research y pensamiento sistémico.">
 <meta name="author" content="Paula Azcue">
 <meta property="og:title" content="Paula Azcue — Senior Product Designer & Design Lead">
-<meta property="og:description" content="Diseño productos digitales end-to-end. Agritech, e-commerce, retail, medios, logística.">
+<meta property="og:description" content="Diseño productos y experiencias para desafíos complejos. Agritech, e-commerce, retail, medios, logística.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://pauazcue.github.io">
 <meta property="og:locale" content="es_AR">
 <link rel="canonical" href="https://pauazcue.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="override-rojo.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="site-home" id="top">
-  <a href="#" class="site-logo">Paula Azcue</a>
-  <div class="nav-right">
-    <a href="index-en.html" class="lang-switch">EN</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuOverlay">+</button>
-  </div>
-</nav>
+<!-- El header (barra + wordmark animado) lo construye header.js en todas las páginas -->
 
 <div class="menu-overlay" id="menuOverlay" role="dialog" aria-label="Menú de navegación" aria-hidden="true">
   <nav class="menu-nav">
@@ -48,14 +42,18 @@
   </nav>
 </div>
 
-<!-- HERO: mini-presentación -->
+<!-- HERO -->
 <section id="resumen" aria-label="Presentación">
   <div class="container">
-    <p class="hero-intro reveal">¡Hola! Soy <strong>Paula Azcue</strong>, diseñadora de productos digitales. Vivo en Buenos Aires, Argentina.</p>
+    <p class="hero-intro reveal">¡Hola! Soy <strong>Paula Azcue</strong>, diseñadora de productos digitales. <span class="hero-loc">Vivo en Buenos Aires, Argentina.</span></p>
     <h1 class="hero-display reveal reveal--delay-1">
-      Diseño productos para desafíos complejos.
+      <span class="hd-line"><span>Diseño productos</span></span>
+      <span class="hd-line"><span>y&nbsp;experiencias para desafíos&nbsp;complejos</span></span>
     </h1>
-    <span class="hero-role reveal reveal--delay-2">Product Design Lead · OCA</span>
+    <div class="hero-foot reveal reveal--delay-2">
+      <span class="hero-role">Product Design Lead</span>
+      <a href="#proyectos" class="hero-scroll">Ver proyectos <span class="hero-scroll-arrow">↓</span></a>
+    </div>
   </div>
 </section>
 
@@ -94,6 +92,12 @@
       <div class="pc-img-hover">
         <img src="img/oca-operacion.jpg" alt="OCA — operación logística" loading="lazy">
       </div>
+      <div class="pc-overlay" aria-hidden="true">
+        <div class="ov-name">OCA</div>
+        <div class="ov-cat">Logística · Producto</div>
+        <div class="ov-period">2023 — presente</div>
+        <div class="ov-sign">Design Lead</div>
+      </div>
       <div class="pc-body">
         <div class="pc-chips">
           <span class="pc-chip">2023–presente</span>
@@ -107,6 +111,12 @@
     <a href="agrofy.html" class="portfolio-card reveal reveal--delay-1" role="listitem" aria-label="Agrofy — 3 proyectos">
       <div class="pc-img-wrap">
         <img src="img/geo-hero.jpg" alt="Agrofy — marketplace agro" loading="lazy" onerror="this.parentElement.classList.add('pc-img-ph')">
+      </div>
+      <div class="pc-overlay" aria-hidden="true">
+        <div class="ov-name">Agrofy</div>
+        <div class="ov-cat">Marketplace · Agro</div>
+        <div class="ov-period">2020 — 2023</div>
+        <div class="ov-sign">Sr. Product Designer</div>
       </div>
       <div class="pc-body">
         <div class="pc-chips">
@@ -122,6 +132,12 @@
       <div class="pc-img-wrap">
         <img src="img/img-metro-3.png" alt="MetroMedia — grupo de medios digitales" loading="lazy" onerror="this.parentElement.classList.add('pc-img-ph')">
       </div>
+      <div class="pc-overlay" aria-hidden="true">
+        <div class="ov-name">Metro</div>
+        <div class="ov-cat">Medios · Marca</div>
+        <div class="ov-period">2017 — 2020</div>
+        <div class="ov-sign">Design Lead</div>
+      </div>
       <div class="pc-body">
         <div class="pc-chips">
           <span class="pc-chip">2017–2020</span>
@@ -131,12 +147,24 @@
       </div>
     </a>
 
-    <!-- Gráfica — próximamente -->
-    <div class="portfolio-card portfolio-card--soon reveal reveal--delay-1" role="listitem" aria-label="Diseño gráfico — próximamente">
-      <div class="pc-img-wrap pc-img-ph">
-        <span class="pc-ph-text">Próximamente</span>
+    <!-- Diseño gráfico — Behance -->
+    <a href="https://www.behance.net/azcue" target="_blank" rel="noopener noreferrer" class="portfolio-card reveal reveal--delay-1" role="listitem" aria-label="Diseño gráfico — ver en Behance">
+      <div class="pc-img-wrap">
+        <img src="img/segal1.jpg" alt="Diseño gráfico — Analía Segal" loading="lazy">
       </div>
-    </div>
+      <div class="pc-overlay" aria-hidden="true">
+        <div class="ov-name">Diseño gráfico</div>
+        <div class="ov-cat">Editorial · Branding</div>
+        <div class="ov-period">Behance ↗</div>
+        <div class="ov-sign">Visual &amp; Print</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-chips">
+          <span class="pc-chip">Behance ↗</span>
+        </div>
+        <div class="pc-title">Diseño gráfico</div>
+      </div>
+    </a>
 
   </div>
 </section>
@@ -379,45 +407,43 @@
   <span>🇦🇷 Buenos Aires, Argentina</span>
 </footer>
 
+<script src="header.js"></script>
 <script>
 const toggle = document.getElementById('menuToggle');
 const overlay = document.getElementById('menuOverlay');
 
-toggle.addEventListener('click', () => {
-  const open = overlay.classList.toggle('is-open');
-  toggle.classList.toggle('open', open);
-  toggle.textContent = open ? '×' : '+';
-  toggle.setAttribute('aria-expanded', open);
-  overlay.setAttribute('aria-hidden', !open);
-  if (open) overlay.querySelector('a').focus();
-});
-
-overlay.querySelectorAll('[data-close]').forEach(el => {
-  el.addEventListener('click', () => {
-    overlay.classList.remove('is-open');
-    toggle.classList.remove('open');
-    toggle.textContent = '+';
-    toggle.setAttribute('aria-expanded', false);
-    overlay.setAttribute('aria-hidden', true);
-    toggle.focus();
+if (toggle && overlay){
+  toggle.addEventListener('click', () => {
+    const open = overlay.classList.toggle('is-open');
+    toggle.classList.toggle('open', open);
+    toggle.textContent = open ? '×' : '+';
+    toggle.setAttribute('aria-expanded', open);
+    overlay.setAttribute('aria-hidden', !open);
+    if (open) overlay.querySelector('a').focus();
   });
-});
 
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
-    overlay.classList.remove('is-open');
-    toggle.classList.remove('open');
-    toggle.textContent = '+';
-    toggle.setAttribute('aria-expanded', false);
-    overlay.setAttribute('aria-hidden', true);
-    toggle.focus();
-  }
-});
+  overlay.querySelectorAll('[data-close]').forEach(el => {
+    el.addEventListener('click', () => {
+      overlay.classList.remove('is-open');
+      toggle.classList.remove('open');
+      toggle.textContent = '+';
+      toggle.setAttribute('aria-expanded', false);
+      overlay.setAttribute('aria-hidden', true);
+      toggle.focus();
+    });
+  });
 
-const nav = document.querySelector('nav.site-home');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+      overlay.classList.remove('is-open');
+      toggle.classList.remove('open');
+      toggle.textContent = '+';
+      toggle.setAttribute('aria-expanded', false);
+      overlay.setAttribute('aria-hidden', true);
+      toggle.focus();
+    }
+  });
+}
 
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
@@ -430,5 +456,6 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => observer.observe(el));
 </script>
+<script src="transitions.js"></script>
 </body>
 </html>
