@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="override-rojo.css">
 </head>
@@ -41,6 +42,29 @@
     </div>
     <h1 class="hub-title">Transformación digital en una de las operaciones logísticas más grandes de Argentina.</h1>
   </header>
+
+  <nav class="works-index reveal" aria-label="Trabajos en OCA">
+    <div class="wi-head">
+      <span>En este proyecto — 6 trabajos</span>
+      <span class="wi-hint">Pasá el mouse ↓</span>
+    </div>
+    <ul class="wi-list">
+      <li><a href="caso-epak.html" class="wi-item" data-img="img/1-epak-hero.jpg" data-cat="Plataforma · Envíos corporativos">ePak</a></li>
+      <li><a href="caso-oms.html" class="wi-item" data-img="img/oms-hero.jpg" data-cat="Plataforma · Gestión de órdenes">OMS</a></li>
+      <li><a href="caso-nandu.html" class="wi-item" data-img="img/nandu-hero.jpg" data-cat="Design System · 2024–presente">Ñandú DS</a></li>
+      <li><a href="caso-oca-backoffice.html" class="wi-item" data-img="img/backoffice-hero.jpg" data-cat="Producto · Tarifación y facturación">Backoffice Comercial</a></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Integración · Próximamente">Plugins e-commerce<span class="wi-soon-mark">○</span></span></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Comunicaciones · Próximamente">Comunicaciones<span class="wi-soon-mark">○</span></span></li>
+    </ul>
+    <div class="wi-preview" aria-hidden="true">
+      <div class="wi-thumb"></div>
+      <div class="wi-info">
+        <div class="wi-name"></div>
+        <div class="wi-cat"></div>
+        <div class="wi-go">Ver caso →</div>
+      </div>
+    </div>
+  </nav>
 </div>
 
 <!-- META FULL WIDTH -->
@@ -334,6 +358,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   });
 })();
 </script>
+<script src="works-index.js"></script>
 <script src="header.js"></script>
 <script src="transitions.js"></script>
 </body>

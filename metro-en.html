@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="override-rojo.css">
 </head>
@@ -39,6 +40,27 @@
     </div>
     <h1 class="hub-title">Graphic and digital design for a media group with very distinct identities.</h1>
   </header>
+
+  <nav class="works-index reveal" aria-label="Work at Metro">
+    <div class="wi-head">
+      <span>In this project — 4 works</span>
+      <span class="wi-hint">Hover ↓</span>
+    </div>
+    <ul class="wi-list">
+      <li><a href="caso-metro-en.html" class="wi-item" data-img="img/img-metro-3.png" data-cat="Radio · Brand · Campaign">Metro 95.1</a></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Digital · Agro · Coming soon">Infocampo<span class="wi-soon-mark">○</span></span></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Digital · News · Coming soon">El Federal<span class="wi-soon-mark">○</span></span></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Digital · City · Coming soon">Puls Urbano<span class="wi-soon-mark">○</span></span></li>
+    </ul>
+    <div class="wi-preview" aria-hidden="true">
+      <div class="wi-thumb"></div>
+      <div class="wi-info">
+        <div class="wi-name"></div>
+        <div class="wi-cat"></div>
+        <div class="wi-go">View case →</div>
+      </div>
+    </div>
+  </nav>
 </div>
 
 <div class="hub-meta-bar reveal">
@@ -212,6 +234,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   prev.addEventListener('click', () => track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
 })();
 </script>
+<script src="works-index.js"></script>
 <script src="header.js"></script>
 <script src="transitions.js"></script>
 </body>

@@ -172,6 +172,59 @@ nav.site-home {
 /* Headers de casos y hubs — menos padding, el header animado ya da aire */
 .case-header { padding: 48px 0 24px; }
 .hub-header { padding: 48px 0 24px; }
+
+/* ── ÍNDICE DE TRABAJOS — bajo el título del hub, preview al hover ── */
+.works-index {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0 0;
+  margin: 8px 0 40px;
+}
+.wi-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px;
+}
+.wi-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 6px 26px;
+}
+.wi-item {
+  font-family: var(--display); font-size: clamp(17px, 2vw, 21px);
+  font-weight: 600; letter-spacing: -0.01em; color: var(--ink);
+  text-decoration: none; display: inline-block; padding: 2px 0;
+  border-bottom: 2px solid transparent;
+  transition: color .2s var(--ease-out-circ), border-color .2s var(--ease-out-circ);
+  cursor: pointer;
+}
+.wi-item:hover, .wi-item:focus-visible { color: var(--red); border-bottom-color: var(--red); outline: none; }
+.wi-item--soon { color: var(--ink-3); cursor: default; }
+.wi-item--soon:hover { color: var(--ink-3); border-bottom-color: transparent; }
+.wi-soon-mark { font-size: 0.7em; vertical-align: 0.15em; margin-left: 3px; }
+
+.wi-preview {
+  display: flex; align-items: center; gap: 18px;
+  height: 0; overflow: hidden; opacity: 0;
+  transition: height .35s var(--ease-out-quart), opacity .3s var(--ease-out-circ);
+}
+.wi-preview.is-active { height: 130px; opacity: 1; margin: 16px 0 4px; }
+.wi-thumb {
+  width: 190px; height: 118px; flex: none; background: var(--ink-3);
+  background-size: cover; background-position: center;
+}
+.wi-name { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--ink); }
+.wi-cat {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-3); margin-top: 5px;
+}
+.wi-go { font-size: 13px; color: var(--red); margin-top: 10px; }
+@media (max-width: 640px) {
+  .wi-preview, .wi-head .wi-hint { display: none; }
+  .wi-list { gap: 4px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wi-preview { transition: none; }
+}
 .hero-loc { color: var(--ink-3); }
 
 /* Rol destacado — más grande que un label */

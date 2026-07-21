@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="override-rojo.css">
 </head>
@@ -39,6 +40,29 @@
     </div>
     <h1 class="hub-title">Product design at Latin America's largest agricultural marketplace.</h1>
   </header>
+
+  <nav class="works-index reveal" aria-label="Work at Agrofy">
+    <div class="wi-head">
+      <span>In this project — 6 works</span>
+      <span class="wi-hint">Hover ↓</span>
+    </div>
+    <ul class="wi-list">
+      <li><a href="caso-agrofy-geo-en.html" class="wi-item" data-img="img/geo-hero.jpg" data-cat="Product · Geolocation">Geo</a></li>
+      <li><a href="caso-agrofy-listing-en.html" class="wi-item" data-img="img/listing-hero.jpg" data-cat="Product · Catalog">Listing</a></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Product · Leads · Coming soon">Leads · Product Detail<span class="wi-soon-mark">○</span></span></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Product · Content · Coming soon">Agrofy News<span class="wi-soon-mark">○</span></span></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Research · Trade shows · Coming soon">Trade show research<span class="wi-soon-mark">○</span></span></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Product · Agro · Coming soon">YPF Agro<span class="wi-soon-mark">○</span></span></li>
+    </ul>
+    <div class="wi-preview" aria-hidden="true">
+      <div class="wi-thumb"></div>
+      <div class="wi-info">
+        <div class="wi-name"></div>
+        <div class="wi-cat"></div>
+        <div class="wi-go">View case →</div>
+      </div>
+    </div>
+  </nav>
 </div>
 
 <div class="hub-meta-bar reveal">
@@ -229,6 +253,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   prev.addEventListener('click', () => track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
 })();
 </script>
+<script src="works-index.js"></script>
 <script src="header.js"></script>
 <script src="transitions.js"></script>
 </body>

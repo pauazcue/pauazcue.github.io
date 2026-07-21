@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="override-rojo.css">
 </head>
@@ -39,6 +40,27 @@
     </div>
     <h1 class="hub-title">Diseño gráfico y digital para un grupo de medios con identidades muy distintas entre sí.</h1>
   </header>
+
+  <nav class="works-index reveal" aria-label="Trabajos en Metro">
+    <div class="wi-head">
+      <span>En este proyecto — 4 trabajos</span>
+      <span class="wi-hint">Pasá el mouse ↓</span>
+    </div>
+    <ul class="wi-list">
+      <li><a href="caso-metro.html" class="wi-item" data-img="img/img-metro-3.png" data-cat="Radio · Marca · Campaña">Metro 95.1</a></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Digital · Agro · Próximamente">Infocampo<span class="wi-soon-mark">○</span></span></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Digital · Noticias · Próximamente">El Federal<span class="wi-soon-mark">○</span></span></li>
+      <li><span class="wi-item wi-item--soon" data-cat="Digital · Ciudad · Próximamente">Puls Urbano<span class="wi-soon-mark">○</span></span></li>
+    </ul>
+    <div class="wi-preview" aria-hidden="true">
+      <div class="wi-thumb"></div>
+      <div class="wi-info">
+        <div class="wi-name"></div>
+        <div class="wi-cat"></div>
+        <div class="wi-go">Ver caso →</div>
+      </div>
+    </div>
+  </nav>
 </div>
 
 <div class="hub-meta-bar reveal">
@@ -212,6 +234,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   prev.addEventListener('click', () => track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
 })();
 </script>
+<script src="works-index.js"></script>
 <script src="header.js"></script>
 <script src="transitions.js"></script>
 </body>
