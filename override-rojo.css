@@ -144,8 +144,12 @@ nav.site-home {
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
   color: var(--ink-3); white-space: nowrap;
   display: none;
+  opacity: 1;
+  transition: opacity .25s var(--ease-out-circ);
 }
 @media (min-width: 860px) { .nav-center { display: block; } }
+/* colapsado: el wordmark ocupa el centro de la barra — el reloj se retira para no pisarlo */
+.site-header.collapsed .nav-center { opacity: 0; pointer-events: none; }
 
 .nav-right { display: flex; align-items: center; gap: 20px; }
 .nav-cta {
