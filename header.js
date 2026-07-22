@@ -154,8 +154,12 @@
   var right = document.createElement("div");
   right.className = "nav-right";
 
-  // Si la página tiene nav.site-case, mudamos sus links a la barra
-  var oldNav = document.querySelector("nav.site-case");
+  var isEN = (document.documentElement.lang || "").indexOf("en") === 0;
+  var isMobile = window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
+
+  // Si la página tiene un nav previo (site-case o site-home residual),
+  // mudamos sus links a la barra y lo eliminamos.
+  var oldNav = document.querySelector("nav.site-case, nav.site-home");
   if (oldNav){
     var back = oldNav.querySelector(".back");
     var lang = oldNav.querySelector(".lang-switch");
@@ -164,24 +168,60 @@
     oldNav.parentNode.removeChild(oldNav);
   }
 
-  // CTA "Hablemos" — al ancla local si existe, si no a la home
-  var isEN = (document.documentElement.lang || "").indexOf("en") === 0;
-  var cta = document.createElement("a");
-  cta.className = "nav-cta";
-  cta.href = document.getElementById("contacto") ? "#contacto" : (isEN ? "index-en.html#contacto" : "index.html#contacto");
-  cta.innerHTML = (isEN ? "Let's talk" : "Hablemos") + ' <span class="nav-cta-arrow">→</span>';
-  right.appendChild(cta);
+  // Menú (hamburguesa) en TODAS las páginas. "Hablemos" vive solo acá.
+  var overlay = document.getElementById("menuOverlay");
+  var builtOverlay = false;
+  if (!overlay){
+    builtOverlay = true;
+    var home = isEN ? "index-en.html" : "index.html";
+    overlay = document.createElement("div");
+    overlay.className = "menu-overlay";
+    overlay.id = "menuOverlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-label", isEN ? "Navigation menu" : "Menú de navegación");
+    overlay.setAttribute("aria-hidden", "true");
+    overlay.innerHTML =
+      '<nav class="menu-nav"><ul>' +
+      '<li><a href="' + home + '">' + (isEN ? "Home" : "Inicio") + '</a></li>' +
+      '<li><a href="' + home + '#proyectos">' + "Work" + '</a></li>' +
+      '<li><a href="' + home + '#experiencia">' + (isEN ? "Experience" : "Experiencia") + '</a></li>' +
+      '<li><a href="' + home + '#contacto">' + (isEN ? "Let's talk" : "Hablemos") + '</a></li>' +
+      '</ul></nav>';
+    document.body.appendChild(overlay);
+  }
 
-  // Botón de menú, solo si la página tiene overlay (la home)
-  if (document.getElementById("menuOverlay")){
-    var toggle = document.createElement("button");
-    toggle.className = "menu-toggle";
-    toggle.id = "menuToggle";
-    toggle.setAttribute("aria-label", isEN ? "Open menu" : "Abrir menú");
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-controls", "menuOverlay");
-    toggle.textContent = "+";
-    right.appendChild(toggle);
+  var toggle = document.createElement("button");
+  toggle.className = "menu-toggle";
+  toggle.id = "menuToggle";
+  toggle.setAttribute("aria-label", isEN ? "Open menu" : "Abrir menú");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-controls", "menuOverlay");
+  toggle.textContent = "+";
+  right.appendChild(toggle);
+
+  // Cableado del menú SOLO si lo creamos acá (en la home lo maneja el inline).
+  if (builtOverlay){
+    function closeMenu(){
+      overlay.classList.remove("is-open");
+      toggle.classList.remove("open");
+      toggle.textContent = "+";
+      toggle.setAttribute("aria-expanded", "false");
+      overlay.setAttribute("aria-hidden", "true");
+    }
+    toggle.addEventListener("click", function(){
+      var open = overlay.classList.toggle("is-open");
+      toggle.classList.toggle("open", open);
+      toggle.textContent = open ? "×" : "+";
+      toggle.setAttribute("aria-expanded", String(open));
+      overlay.setAttribute("aria-hidden", String(!open));
+      if (open){ var a = overlay.querySelector("a"); if (a) a.focus(); }
+    });
+    overlay.addEventListener("click", function(e){
+      if (e.target.closest && e.target.closest("a")) closeMenu();
+    });
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape" && overlay.classList.contains("is-open")){ closeMenu(); toggle.focus(); }
+    });
   }
 
   bar.appendChild(left);
@@ -214,29 +254,45 @@
   setInterval(tick, 1000);
 
   // Wordmark + colapso (header fixed, padding del body constante = sin titileo)
-  var BAR = 52, GAP = 8, TAIL = 20;
-  var S = Math.min(30, Math.floor((window.innerWidth ? Math.min(window.innerWidth - 40, 400) : 400) / COLS));
+  var BAR = 52, GAP = 8, TAIL = isMobile ? 12 : 20;
+  var vw = window.innerWidth || 400;
+  var S = isMobile
+    ? Math.min(20, Math.floor((vw - 32) / COLS))
+    : Math.min(30, Math.floor(Math.min(vw - 40, 400) / COLS));
   var wm = makeWordmark(wmHost, {cell: S, startFig: 1});
   var expandedH = GAP + (ROWS * S) + TAIL;
   wmBox.style.height = expandedH + "px";
   document.body.style.paddingTop = (BAR + expandedH) + "px";
 
   var collapsed = false;
+  var idleTimer;
   function onScroll(){
     var y = window.scrollY;
+
+    // Mientras se scrollea, el wordmark NO se anima (se congela). Vuelve a
+    // animarse solo cuando la página queda quieta y está expandido (arriba).
+    wm.stop();
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(function(){
+      if (!collapsed && !REDUCED) wm.play();
+    }, 280);
+
     if (!collapsed && y > 60){
       collapsed = true;
       header.classList.add("collapsed");
-      wm.stop();
-      wm.go(0);
+      wm.go(0, true);            // instantáneo: se ordena en una línea sin "caer"
       wmBox.style.height = "0px";
-      wm.stage.style.transform = "translateY(" + (BAR/2 - (BAR + GAP) - 1.5 * S) + "px)";
+      // desktop: el wordmark queda fijo en una línea dentro de la barra.
+      // mobile: se oculta (wmBox height 0 + overflow hidden) para no pisar la barra.
+      if (!isMobile){
+        wm.stage.style.transform = "translateY(" + (BAR/2 - (BAR + GAP) - 1.5 * S) + "px)";
+      }
     } else if (collapsed && y < 10){
       collapsed = false;
       header.classList.remove("collapsed");
       wmBox.style.height = expandedH + "px";
       wm.stage.style.transform = "translateY(0)";
-      if (!REDUCED) wm.play();
+      // el morph se reanuda por el idleTimer cuando dejás de scrollear
     }
   }
   window.addEventListener("scroll", onScroll, { passive: true });

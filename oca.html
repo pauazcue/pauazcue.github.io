@@ -18,7 +18,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="https://use.typekit.net/tal3bft.css">
+<link rel="icon" type="image/svg+xml" href="favicon-alt.svg">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="override-rojo.css">
 </head>
@@ -28,7 +29,7 @@
 <nav class="site-case">
   <a href="index.html" class="logo" aria-label="Volver al inicio">Pau Azcue</a>
   <div class="nav-right">
-    <a href="index.html#proyectos" class="back">← Proyectos</a>
+    <a href="index.html#proyectos" class="back">← Work</a>
     <a href="oca-en.html" class="lang-switch">EN</a>
   </div>
 </nav>
@@ -43,27 +44,18 @@
     <h1 class="hub-title">Transformación digital en una de las operaciones logísticas más grandes de Argentina.</h1>
   </header>
 
-  <nav class="works-index reveal" aria-label="Trabajos en OCA">
-    <div class="wi-head">
-      <span>En este proyecto — 6 trabajos</span>
-      <span class="wi-hint">Pasá el mouse ↓</span>
-    </div>
-    <ul class="wi-list">
-      <li><a href="caso-epak.html" class="wi-item" data-img="img/1-epak-hero.jpg" data-cat="Plataforma · Envíos corporativos">ePak</a></li>
-      <li><a href="caso-oms.html" class="wi-item" data-img="img/oms-hero.jpg" data-cat="Plataforma · Gestión de órdenes">OMS</a></li>
-      <li><a href="caso-nandu.html" class="wi-item" data-img="img/nandu-hero.jpg" data-cat="Design System · 2024–presente">Ñandú DS</a></li>
-      <li><a href="caso-oca-backoffice.html" class="wi-item" data-img="img/backoffice-hero.jpg" data-cat="Producto · Tarifación y facturación">Backoffice Comercial</a></li>
-      <li><span class="wi-item wi-item--soon" data-cat="Integración · Próximamente">Plugins e-commerce<span class="wi-soon-mark">○</span></span></li>
-      <li><span class="wi-item wi-item--soon" data-cat="Comunicaciones · Próximamente">Comunicaciones<span class="wi-soon-mark">○</span></span></li>
+  <nav class="hub-cases" aria-label="Casos en OCA">
+    <div class="hc-head">Casos</div>
+    <ul class="hc-list">
+      <li><a class="hc-item" href="caso-epak.html" data-img="img/1-epak-hero.jpg"><span class="hc-name">ePak</span></a></li>
+      <li><a class="hc-item" href="caso-oms.html" data-img="img/oms-hero.jpg"><span class="hc-name">OMS</span></a></li>
+      <li><a class="hc-item" href="caso-nandu.html" data-img="img/nandu-hero.jpg"><span class="hc-name">Ñandú DS</span></a></li>
+      <li><a class="hc-item" href="caso-oca-backoffice.html" data-img="img/backoffice-hero.jpg"><span class="hc-name">Backoffice Comercial</span></a></li>
+      <li><span class="hc-item hc-item--soon"><span class="hc-name">Plugins e-commerce</span></span></li>
+      <li><span class="hc-item hc-item--soon"><span class="hc-name">Comunicaciones</span></span></li>
     </ul>
-    <div class="wi-preview" aria-hidden="true">
-      <div class="wi-thumb"></div>
-      <div class="wi-info">
-        <div class="wi-name"></div>
-        <div class="wi-cat"></div>
-        <div class="wi-go">Ver caso →</div>
-      </div>
-    </div>
+    <a class="hc-all" href="#hub-casos">Ver todos →</a>
+    <div class="hc-preview" aria-hidden="true"><div class="hc-thumb"></div></div>
   </nav>
 </div>
 
@@ -201,7 +193,7 @@
   <div class="work-header">
     <div>
       <span class="work-label">Iniciativas</span>
-      <div class="work-title">Work <span class="work-count">(06)</span></div>
+      <div class="work-title">Casos <span class="work-count">(06)</span></div>
     </div>
     <div class="carousel-nav">
       <button class="carousel-btn" id="carPrev" aria-label="Anterior">←</button>

@@ -18,7 +18,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="https://use.typekit.net/tal3bft.css">
+<link rel="icon" type="image/svg+xml" href="favicon-alt.svg">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="override-rojo.css">
 </head>
@@ -27,7 +28,7 @@
 <nav class="site-case">
   <a href="index.html" class="logo" aria-label="Volver al inicio">Pau Azcue</a>
   <div class="nav-right">
-    <a href="index.html#proyectos" class="back">← Proyectos</a>
+    <a href="index.html#proyectos" class="back">← Work</a>
     <a href="agrofy-en.html" class="lang-switch">EN</a>
   </div>
 </nav>
@@ -41,27 +42,18 @@
     <h1 class="hub-title">Diseño de producto en el marketplace agropecuario más grande de Latinoamérica.</h1>
   </header>
 
-  <nav class="works-index reveal" aria-label="Trabajos en Agrofy">
-    <div class="wi-head">
-      <span>En este proyecto — 6 trabajos</span>
-      <span class="wi-hint">Pasá el mouse ↓</span>
-    </div>
-    <ul class="wi-list">
-      <li><a href="caso-agrofy-geo.html" class="wi-item" data-img="img/geo-hero.jpg" data-cat="Producto · Geolocalización">Geo</a></li>
-      <li><a href="caso-agrofy-listing.html" class="wi-item" data-img="img/listing-hero.jpg" data-cat="Producto · Catálogo">Listing</a></li>
-      <li><span class="wi-item wi-item--soon" data-cat="Producto · Leads · Próximamente">Leads · Detalle de producto<span class="wi-soon-mark">○</span></span></li>
-      <li><span class="wi-item wi-item--soon" data-cat="Producto · Contenido · Próximamente">Agrofy News<span class="wi-soon-mark">○</span></span></li>
-      <li><span class="wi-item wi-item--soon" data-cat="Research · Ferias · Próximamente">Research en ferias<span class="wi-soon-mark">○</span></span></li>
-      <li><span class="wi-item wi-item--soon" data-cat="Producto · Agro · Próximamente">YPF Agro<span class="wi-soon-mark">○</span></span></li>
+  <nav class="hub-cases" aria-label="Casos en Agrofy">
+    <div class="hc-head">Casos</div>
+    <ul class="hc-list">
+      <li><a class="hc-item" href="caso-agrofy-geo.html" data-img="img/geo-hero.jpg"><span class="hc-name">Geo</span></a></li>
+      <li><a class="hc-item" href="caso-agrofy-listing.html" data-img="img/listing-hero.jpg"><span class="hc-name">Listing</span></a></li>
+      <li><span class="hc-item hc-item--soon"><span class="hc-name">Leads · Detalle de producto</span></span></li>
+      <li><span class="hc-item hc-item--soon"><span class="hc-name">Agrofy News</span></span></li>
+      <li><span class="hc-item hc-item--soon"><span class="hc-name">Research en ferias</span></span></li>
+      <li><span class="hc-item hc-item--soon"><span class="hc-name">YPF Agro</span></span></li>
     </ul>
-    <div class="wi-preview" aria-hidden="true">
-      <div class="wi-thumb"></div>
-      <div class="wi-info">
-        <div class="wi-name"></div>
-        <div class="wi-cat"></div>
-        <div class="wi-go">Ver caso →</div>
-      </div>
-    </div>
+    <a class="hc-all" href="#hub-casos">Ver todos →</a>
+    <div class="hc-preview" aria-hidden="true"><div class="hc-thumb"></div></div>
   </nav>
 </div>
 
@@ -144,7 +136,7 @@
   <div class="work-header">
     <div>
       <span class="work-label">Iniciativas</span>
-      <div class="work-title">Work <span class="work-count">(06)</span></div>
+      <div class="work-title">Casos <span class="work-count">(06)</span></div>
     </div>
     <div class="carousel-nav">
       <button class="carousel-btn" id="carPrev" aria-label="Anterior">←</button>
