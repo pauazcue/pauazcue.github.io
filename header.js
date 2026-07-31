@@ -277,9 +277,10 @@
       if (!collapsed && !REDUCED) wm.play();
     }, 280);
 
-    if (!collapsed && y > 60){
+    if (!collapsed && y > 16){
       collapsed = true;
       header.classList.add("collapsed");
+      wm.stop();                 // corta cualquier ciclo pendiente
       wm.go(0, true);            // instantáneo: se ordena en una línea sin "caer"
       wmBox.style.height = "0px";
       // desktop: el wordmark queda fijo en una línea dentro de la barra.
@@ -287,7 +288,7 @@
       if (!isMobile){
         wm.stage.style.transform = "translateY(" + (BAR/2 - (BAR + GAP) - 1.5 * S) + "px)";
       }
-    } else if (collapsed && y < 10){
+    } else if (collapsed && y < 6){
       collapsed = false;
       header.classList.remove("collapsed");
       wmBox.style.height = expandedH + "px";

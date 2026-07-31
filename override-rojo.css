@@ -269,12 +269,12 @@ a.hc-item:hover .hc-name { color: var(--ink); }   /* hover: más oscuro, no rojo
 
 /* ── DÚO imagen + video (16:9) lado a lado ── */
 .media-duo {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-  margin: 40px 0 8px;
+  width: 100vw; margin-left: calc(-50vw + 50%); margin-top: 40px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
 }
 .media-duo .md-cell { aspect-ratio: 16 / 9; overflow: hidden; background: #E0DDD7; }
 .media-duo img, .media-duo video { width: 100%; height: 100%; object-fit: cover; display: block; }
-@media (max-width: 768px) { .media-duo { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .media-duo { grid-template-columns: 1fr; } }
 
 /* ── HEADER MOBILE — el wordmark colapsado se oculta (no pisa la barra) ── */
 @media (max-width: 768px) {
@@ -381,6 +381,24 @@ a.hc-item:hover .hc-name { color: var(--ink); }   /* hover: más oscuro, no rojo
   .reveal, .reveal.reveal--left, .reveal.reveal--right {
     transition: none !important; transform: none !important; opacity: 1 !important;
   }
+}
+
+/* reveal tipo máscara (estilo lavis.work): una cortina se corre revelando
+   la imagen/video, con un leve zoom-out por detrás */
+.reveal.reveal--mask { opacity: 1; transform: none; position: relative; overflow: hidden; }
+.reveal--mask img, .reveal--mask video {
+  transform: scale(1.1); transition: transform 1.2s var(--ease-out-quart);
+}
+.reveal--mask.is-visible img, .reveal--mask.is-visible video { transform: scale(1); }
+.reveal--mask::after {
+  content: ""; position: absolute; inset: 0; z-index: 3;
+  background: var(--bg); transform: translateX(0);
+  transition: transform .9s var(--ease-out-expo);
+}
+.reveal--mask.is-visible::after { transform: translateX(101%); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal--mask img, .reveal--mask video { transform: none !important; transition: none !important; }
+  .reveal--mask::after { display: none !important; }
 }
 
 /* ── LOGO nav casos (oca.html etc, si se reutiliza) ── */
