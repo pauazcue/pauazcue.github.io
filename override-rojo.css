@@ -475,3 +475,16 @@ a.hn-item::after { color: var(--red); transition: transform .2s var(--ease-out-c
 /* ── ESQUINAS RECTAS EN TODO ── */
 .car-img, .hub-split, .img-hero-split, .img-full, .carousel-btn { border-radius: 0 !important; }
 .pc-chip { border: 1px solid rgba(255,255,255,0.7); background: transparent; border-radius: 0; font-family: var(--mono); }
+
+/* ── Navegación (nov 2026): menú con texto, accesos directos, sin "Próximamente" ── */
+.car-card--soon, .hub-cases li:has(.hc-item--soon), .mc-list li:has(.mc-item--soon) { display: none !important; }
+.menu-toggle { width: auto; min-width: 76px; padding: 0 14px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.menu-toggle.open { transform: none; }
+.nav-quick { display: flex; align-items: center; gap: 22px; }
+.nav-quick a { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
+.nav-quick a:hover { color: var(--red); border-bottom-color: var(--red); }
+@media (max-width: 1299px) { .nav-quick { display: none; } }
+.menu-nav a.menu-cv { font-size: .6em; letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
+#experiencia .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.cv-download { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-inverse); border: 1px solid rgba(255,255,255,.5); padding: 10px 16px; text-decoration: none; }
+.cv-download:hover { background: var(--red); border-color: var(--red); }

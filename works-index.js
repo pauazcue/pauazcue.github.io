@@ -15,7 +15,7 @@
       var head = menu.querySelector(".hc-head");
       var label = head ? head.textContent.trim() : "Casos";
       var isEN = (document.documentElement.lang || "").indexOf("en") === 0;
-      var items = menu.querySelectorAll(".hc-item");
+      var items = menu.querySelectorAll(".hc-item:not(.hc-item--soon)");
       var lis = "";
       items.forEach(function(el){
         var name = el.querySelector(".hc-name").textContent;
@@ -27,8 +27,8 @@
       var box = document.createElement("div");
       box.className = "container mc-container";
       box.innerHTML =
-        '<div class="mc-accordion">' +
-          '<button class="mc-toggle" aria-expanded="false">' + label +
+        '<div class="mc-accordion is-open">' +
+          '<button class="mc-toggle" aria-expanded="true">' + label +
             ' <span class="mc-count">(' + items.length + ')</span>' +
             '<span class="mc-chevron" aria-hidden="true"></span></button>' +
           '<div class="mc-wrap"><ul class="mc-list">' + lis + "</ul>" +

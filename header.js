@@ -183,9 +183,10 @@
     overlay.innerHTML =
       '<nav class="menu-nav"><ul>' +
       '<li><a href="' + home + '">' + (isEN ? "Home" : "Inicio") + '</a></li>' +
-      '<li><a href="' + home + '#proyectos">' + "Work" + '</a></li>' +
-      '<li><a href="' + home + '#experiencia">' + (isEN ? "Experience" : "Experiencia") + '</a></li>' +
-      '<li><a href="' + home + '#contacto">' + (isEN ? "Let's talk" : "Hablemos") + '</a></li>' +
+      '<li><a href="' + home + '#proyectos">' + (isEN ? "Work" : "Trabajos") + '</a></li>' +
+      '<li><a href="' + home + '#experiencia">CV</a></li>' +
+      '<li><a href="' + home + '#contacto">' + (isEN ? "Contact" : "Contacto") + '</a></li>' +
+      '<li><a href="' + (isEN ? "Paula_Azcue_CV_EN.pdf" : "Paula_Azcue_CV.pdf") + '" target="_blank" class="menu-cv">' + (isEN ? "Download CV (PDF)" : "Descargar CV (PDF)") + '</a></li>' +
       '</ul></nav>';
     document.body.appendChild(overlay);
   }
@@ -196,7 +197,21 @@
   toggle.setAttribute("aria-label", isEN ? "Open menu" : "Abrir menú");
   toggle.setAttribute("aria-expanded", "false");
   toggle.setAttribute("aria-controls", "menuOverlay");
-  toggle.textContent = "+";
+  var LBL_OPEN = isEN ? "Menu" : "Menú", LBL_CLOSE = isEN ? "Close" : "Cerrar";
+  toggle.textContent = LBL_OPEN;
+
+  // Accesos directos visibles en desktop
+  var homeUrl = isEN ? "index-en.html" : "index.html";
+  var path = location.pathname;
+  var onHome = path.slice(-1) === "/" || path.slice(-10) === "index.html" || path.slice(-13) === "index-en.html";
+  var base = onHome ? "" : homeUrl;
+  var quick = document.createElement("div");
+  quick.className = "nav-quick";
+  quick.innerHTML =
+    '<a href="' + base + '#proyectos">' + (isEN ? "Work" : "Trabajos") + '</a>' +
+    '<a href="' + base + '#experiencia">CV</a>' +
+    '<a href="' + base + '#contacto">' + (isEN ? "Contact" : "Contacto") + '</a>';
+  right.insertBefore(quick, right.firstChild);
   right.appendChild(toggle);
 
   // Cableado del menú SOLO si lo creamos acá (en la home lo maneja el inline).
@@ -204,14 +219,14 @@
     function closeMenu(){
       overlay.classList.remove("is-open");
       toggle.classList.remove("open");
-      toggle.textContent = "+";
+      toggle.textContent = LBL_OPEN;
       toggle.setAttribute("aria-expanded", "false");
       overlay.setAttribute("aria-hidden", "true");
     }
     toggle.addEventListener("click", function(){
       var open = overlay.classList.toggle("is-open");
       toggle.classList.toggle("open", open);
-      toggle.textContent = open ? "×" : "+";
+      toggle.textContent = open ? LBL_CLOSE : LBL_OPEN;
       toggle.setAttribute("aria-expanded", String(open));
       overlay.setAttribute("aria-hidden", String(!open));
       if (open){ var a = overlay.querySelector("a"); if (a) a.focus(); }
